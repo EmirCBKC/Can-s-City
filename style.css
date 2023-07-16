@@ -5,18 +5,15 @@
     list-style: none;
 }
 
-body {
-    background-color: #FA8BFF;
-    background-image: linear-gradient(to top, #000000 10%, #000000d3 37%, #fbcd00 49%, #600d00 60%, #000000 90%);
-}
+/******************************************* NAVBAR-CSS-START ***********************************************/
 
 .home-background {
+    background-image: linear-gradient(to top, #000000 10%, #000000d3 37%, #fbcd00 49%, #600d00 60%, #000000 90%);
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
 }
 
-/******************************************* NAVBAR-CSS-START ***********************************************/
 .nav {
     width: 100%;
     height: auto;
@@ -26,21 +23,11 @@ nav {
     background: linear-gradient(0deg, rgba(0, 255, 255, 1) 0%, rgba(0, 0, 0, 0.834) 15%);
     width: 100%;
     background-color: black;
-    animation: NavBottom 3s infinite;
 }
 
-@keyframes NavBottom {
-    0% {
-        box-shadow: rgba(0, 255, 255, 0.3) 0px 5px, rgba(0, 255, 255, 0.2) 0px 10px, rgba(0, 255, 255, 0.1) 0px 15px, rgba(0, 255, 255, 0.07) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
-    }
-
-    50% {
-        box-shadow: rgba(0, 255, 255, 0.5) 0px 5px, rgba(0, 255, 255, 0.4) 0px 10px, rgba(0, 255, 255, 0.3) 0px 15px, rgba(0, 255, 255, 0.2) 0px 20px, rgba(0, 255, 255, 0.1) 0px 25px;
-    }
-
-    100% {
-        box-shadow: rgba(0, 255, 255, 0.3) 0px 5px, rgba(0, 255, 255, 0.2) 0px 10px, rgba(0, 255, 255, 0.1) 0px 15px, rgba(0, 255, 255, 0.07) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
-    }
+.navbar-toggler-icon{
+    background-color: #00ffff;
+    border-radius: 5px;
 }
 
 .navbar-brand{
@@ -53,18 +40,8 @@ nav {
     animation: NavClick 2s infinite;
 }
 
-@keyframes NavClick {
-    0% {
-        text-shadow: 2px 2px 2px aqua;
-    }
-
-    50% {
-        text-shadow: 2px 2px 10px aqua;
-    }
-
-    100% {
-        text-shadow: 2px 2px 2px aqua;
-    }
+.navbar-collapse{
+    text-align: center;
 }
 
 .dropdown button {
@@ -129,6 +106,7 @@ li a:hover {
 
 .carousel {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    animation: CarouselAni 3s infinite;
 }
 
 .home-pc {
@@ -224,6 +202,7 @@ li a:hover {
 
 .accordion {
     width: 50%;
+    animation: AccordionAni 3s infinite;
 }
 
 .accordion-item {
@@ -241,29 +220,241 @@ li a:hover {
 
 /******************************************* HOME-CSS-END ************************************************/
 
+/******************************************* PC-CSS-START ************************************************/
+.header img{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.pc-background {
+    background-image: linear-gradient(to top, #170029 10%, #100d26d3 37%, #004692 49%, #600d00 60%, #000000 90%);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+}
+.pc-filter{
+    background-color: #000000ad;
+    border-radius: 30px;
+    width: 60%;
+    height: 10rem;
+}
+.pc-filter a{
+    background-color: #b56600;
+    border-radius: 30px;
+    width: 25%;
+    height: 35%;
+    text-align: center;
+    font-size: 100%;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.pc-filter a:hover{
+    background-color: rgb(255, 204, 0);
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.pc-filter input{
+    width: 20%;
+    height: 40%;
+    border-radius: 20px;
+    color: black;
+    font-size: 25px;
+    background-color: rgb(255, 204, 0);
+}
+
+.pc-content{
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pc-game{
+    border: 4px solid #00ffff;
+    background-image: linear-gradient(0deg, #26000d5a 40%, #b5fffd51 100%);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.pc-game img{
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.pc-game h1,.pc-game h2{
+    color: white;
+}
+.pc-game a{
+    border: none;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.pc-game a:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #008692;
+    color: #000516;
+}
+
+/******************************************* PC-CSS-END ************************************************/
+
+/******************************************* PS5-CSS-START ************************************************/
+
+.ps5-background {
+    background-image: linear-gradient(to top, #000000 10%, #3c3c3cd3 45%, #ffffff 60%, #353535 75%, #000000 90%);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+}
+.ps5-filter{
+    background-color: #4a4a4ab3;
+    border-radius: 30px;
+    width: 60%;
+    height: 10rem;
+}
+.ps5-filter a{
+    background-color: rgb(18, 18, 18);
+    border-radius: 30px;
+    width: 25%;
+    height: 35%;
+    text-align: center;
+    font-size: 100%;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.ps5-filter a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.ps5-filter input{
+    width: 20%;
+    height: 40%;
+    border-radius: 20px;
+    color: black;
+    font-size: 25px;
+}
+
+.ps5-content{
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ps5-game{
+    border: 4px solid #00ffff;
+    background-image: linear-gradient(0deg, #0000005a 40%, #ffffffab 100%);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.ps5-game img{
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.ps5-game h1,.ps5-game h2{
+    color: white;
+}
+.ps5-game a{
+    border: none;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.ps5-game a:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #008692;
+    color: #000516;
+}
+
+
+/******************************************* PS5-CSS-END ************************************************/
+
+/******************************************* XBOX-CSS-START ************************************************/
+
+.xbox-background {
+    background-image: linear-gradient(to top, #000000 10%, #003907 35%, #1ac12e 60%, #1ac12e 60%, #000000 90%);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+}
+.xbox-filter{
+    background-color: #000000b3;
+    border-radius: 30px;
+    width: 60%;
+    height: 10rem;
+}
+.xbox-filter a{
+    background-color: rgb(18, 18, 18);
+    border-radius: 30px;
+    width: 25%;
+    height: 35%;
+    text-align: center;
+    font-size: 100%;
+    color: #1ac12e;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.xbox-filter a:hover{
+    background-color: #1ac12e;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.xbox-filter input{
+    width: 20%;
+    height: 40%;
+    border-radius: 20px;
+    color: black;
+    font-size: 25px;
+    background-color: #1ac12e;
+}
+
+.xbox-content{
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.xbox-game{
+    border: 4px solid #00ffff;
+    background-image: linear-gradient(0deg, #0000005a 40%, #ffffffab 100%);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.xbox-game img{
+    border-radius: 30px;
+    border: 2px solid #1ac12e;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.xbox-game h1,.xbox-game h2{
+    color: #1ac12e;
+}
+.xbox-game a{
+    background-color: #1ac12e;
+    border: none;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.xbox-game a:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #008692;
+    color: #000516;
+}
+
+
+/******************************************* XBOX-CSS-END ************************************************/
+
 /******************************************* FOOTER-CSS-START ***********************************************/
 footer {
     position: static;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 30rem;
+    height: auto;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.834) 96%, rgba(0, 255, 255, 1) 100%);
     animation: FooterAni 3s infinite;
-}
-
-@keyframes FooterAni {
-    0% {
-        box-shadow: rgba(0, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.3) 0px 18px 36px -18px inset;
-    }
-
-    50% {
-        box-shadow: rgba(0, 255, 255, 1) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.5) 0px 18px 36px -18px inset;
-    }
-
-    100% {
-        box-shadow: rgba(0, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.3) 0px 18px 36px -18px inset;
-    }
 }
 
 footer li a {
@@ -286,3 +477,77 @@ footer h2 {
 }
 
 /******************************************* FOOTER-CSS-END ***********************************************/
+
+/******************************************* Animation-Start ****************************************************/
+
+@keyframes AccordionAni {
+    0% {
+        box-shadow: rgba(0, 255, 255, 0.3) 0px 5px, rgba(0, 255, 255, 0.2) 0px 10px, rgba(0, 255, 255, 0.1) 0px 15px, rgba(0, 255, 255, 0.07) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
+    }
+
+    50% {
+        box-shadow: rgba(0, 255, 255, 0.5) 0px 15px, rgba(0, 255, 255, 0.4) 0px 20px, rgba(0, 255, 255, 0.3) 0px 25px, rgba(0, 255, 255, 0.2) 0px 30px, rgba(0, 255, 255, 0.1) 0px 35px;
+    }
+
+    100% {
+        box-shadow: rgba(0, 255, 255, 0.3) 0px 5px, rgba(0, 255, 255, 0.2) 0px 10px, rgba(0, 255, 255, 0.1) 0px 15px, rgba(0, 255, 255, 0.07) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
+    }
+}
+@keyframes CarouselAni {
+    0% {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 5px, rgba(0, 0, 0, 0.2) 0px 10px, rgba(0, 0, 0, 0.1) 0px 15px, rgba(0, 0, 0, 0.07) 0px 20px, rgba(0, 0, 0, 0.05) 0px 25px;
+    }
+
+    50% {
+        box-shadow: rgba(0, 0, 0, 0.793) 0px 15px, rgba(0, 0, 0, 0.548) 0px 20px, rgba(0, 0, 0, 0.514) 25px, rgba(0, 0, 0, 0.565) 0px 30px, rgba(0, 0, 0, 0.428) 0px 35px;
+    }
+
+    100% {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 5px, rgba(0, 0, 0, 0.2) 0px 10px, rgba(0, 0, 0, 0.1) 0px 15px, rgba(0, 0, 0, 0.07) 0px 20px, rgba(0, 0, 0, 0.05) 0px 25px;
+    }
+}
+@keyframes NavClick {
+    0% {
+        text-shadow: 2px 2px 2px aqua;
+    }
+
+    50% {
+        text-shadow: 2px 2px 10px aqua;
+    }
+
+    100% {
+        text-shadow: 2px 2px 2px aqua;
+    }
+}
+@keyframes FooterAni {
+    0% {
+        box-shadow: rgba(0, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    50% {
+        box-shadow: rgba(0, 255, 255, 1) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.5) 0px 18px 36px -18px inset;
+    }
+
+    100% {
+        box-shadow: rgba(0, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.3) 0px 18px 36px -18px inset;
+    }
+}
+
+/******************************************* Animation-End ****************************************************/
+
+/************************************* Media-Responsive ******************************************************/
+@media (max-width:750px) {
+    .pc-filter{
+        width: 90%;
+        height: 5rem;
+        background-color: #214848;
+    }
+    .pc-filter a{
+        width: 30%;
+        height: 50%;
+    }
+    .pc-filter input{
+        width: 30%;
+        height: 50%;
+    }
+}
