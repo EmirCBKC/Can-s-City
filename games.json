@@ -2,10 +2,10 @@
     {
         "id": 1,
         "title": "PC",
-        "background-image": "/main-img/pc/ac-mirage/background.jpg",
+        "background_image": "/main-img/pc/ac-mirage/background.jpg",
         "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/pc/ac-mirage/left.png",
-        "right-png": "/main-img/pc/ac-mirage/right.png",
+        "left_png": "/main-img/pc/ac-mirage/left.png",
+        "right_png": "/main-img/pc/ac-mirage/right.png",
         "standart": {
             "img": "/main-img/pc/ac-mirage/standart.jpg",
             "name": "Assassin's Creed Mirage",
@@ -33,10 +33,10 @@
     {
         "id": 2,
         "title": "PC",
-        "background-image": "/main-img/pc/gta-5/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/pc/gta-5/left.png",
-        "right-png": "/main-img/pc/gta-5/right.png",
+        "background_image": "/main-img/pc/gta-5/background.jpg",
+        "iframe": "https://www.youtube.com/embed/hvoD7ehZPcM",
+        "left_png": "/main-img/pc/gta-5/left.png",
+        "right_png": "/main-img/pc/gta-5/right.png",
         "standart": {
             "img": "/main-img/pc/gta-5/standart.jpg",
             "name": "Grand Theft Auto 5",
@@ -64,10 +64,10 @@
     {
         "id": 3,
         "title": "PC",
-        "background-image": "/main-img/pc/mortal-kombat/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/pc/mortal-kombat/left.png",
-        "right-png": "/main-img/pc/mortal-kombat/right.png",
+        "background_image": "/main-img/pc/mortal-kombat/background.jpg",
+        "iframe": "https://www.youtube.com/embed/UZ6eFEjFfJ0",
+        "left_png": "/main-img/pc/mortal-kombat/left.png",
+        "right_png": "/main-img/pc/mortal-kombat/right.png",
         "standart": {
             "img": "/main-img/pc/mortal-kombat/standart.png",
             "name": "Mortal Kombat 1",
@@ -95,10 +95,10 @@
     {
         "id": 4,
         "title": "PC",
-        "background-image": "/main-img/pc/nfs-unbound/background.png",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/pc/nfs-unbound/left.png",
-        "right-png": "/main-img/pc/nfs-unbound/right.png",
+        "background_image": "/main-img/pc/nfs-unbound/background.png",
+        "iframe": "https://www.youtube.com/embed/H2Y8XCe7F9E",
+        "left_png": "/main-img/pc/nfs-unbound/left.png",
+        "right_png": "/main-img/pc/nfs-unbound/right.png",
         "standart": {
             "img": "/main-img/pc/nfs-unbound/standart.jpg",
             "name": "Need For Speed Unbound",
@@ -126,10 +126,10 @@
     {
         "id": 5,
         "title": "PC",
-        "background-image": "/main-img/pc/rdr-2/background.png",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/pc/rdr-2/left.png",
-        "right-png": "/main-img/pc/rdr-2/right.png",
+        "background_image": "/main-img/pc/rdr-2/background.png",
+        "iframe": "https://www.youtube.com/embed/eaW0tYpxyp0",
+        "left_png": "/main-img/pc/rdr-2/left.png",
+        "right_png": "/main-img/pc/rdr-2/right.png",
         "standart": {
             "img": "/main-img/pc/rdr-2/standart.jpg",
             "name": "Red Dead Redemption 2",
@@ -157,10 +157,10 @@
     {
         "id": 6,
         "title": "PS5",
-        "background-image": "/main-img/ps5/ghost-of-Tsushima/background.png",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/ps5/ghost-of-Tsushima/left.png",
-        "right-png": "/main-img/ps5/ghost-of-Tsushima/right.png",
+        "background_image": "/main-img/ps5/ghost-of-Tsushima/background.png",
+        "iframe": "https://www.youtube.com/embed/iqysmS4lxwQ",
+        "left_png": "/main-img/ps5/ghost-of-Tsushima/left.png",
+        "right_png": "/main-img/ps5/ghost-of-Tsushima/right.png",
         "standart": {
             "img": "/main-img/ps5/ghost-of-Tsushima/special.jpg",
             "name": "Ghost of Tsushima",
@@ -188,10 +188,10 @@
     {
         "id": 7,
         "title": "PS5",
-        "background-image": "/main-img/ps5/god-of-war/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/ps5/god-of-war/left.png",
-        "right-png": "/main-img/ps5/god-of-war/right.png",
+        "background_image": "/main-img/ps5/god-of-war/background.jpg",
+        "iframe": "https://www.youtube.com/embed/hfJ4Km46A-0",
+        "left_png": "/main-img/ps5/god-of-war/left.png",
+        "right_png": "/main-img/ps5/god-of-war/right.png",
         "standart": {
             "img": "/main-img/ps5/god-of-war/deluxe.jpeg",
             "name": "God of War",
@@ -219,10 +219,10 @@
     {
         "id": 8,
         "title": "PS5",
-        "background-image": "/main-img/ps5/gran-tourismo/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/ps5/gran-tourismo/left.png",
-        "right-png": "/main-img/ps5/gran-tourismo/right.png",
+        "background_image": "/main-img/ps5/gran-tourismo/background.jpg",
+        "iframe": "https://www.youtube.com/embed/1tBUsXIkG1A",
+        "left_png": "/main-img/ps5/gran-tourismo/left.png",
+        "right_png": "/main-img/ps5/gran-tourismo/right.png",
         "standart": {
             "img": "/main-img/ps5/gran-tourismo/standart.jpeg",
             "name": "Gran Turismo 7",
@@ -250,27 +250,27 @@
     {
         "id": 9,
         "title": "PS5",
-        "background-image": "/main-img/ps5/last-of-us/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/ps5/last-of-us/left.png",
-        "right-png": "/main-img/ps5/last-of-us/right.png",
+        "background_image": "/main-img/ps5/last-of-us/background.jpg",
+        "iframe": "https://www.youtube.com/embed/vhII1qlcZ4E",
+        "left_png": "/main-img/ps5/last-of-us/left.png",
+        "right_png": "/main-img/ps5/last-of-us/right.png",
         "standart": {
             "img": "/main-img/ps5/last-of-us/standart.jpg",
-            "name": "LAST OF US PART 2",
+            "name": "The Last of Us Part 2",
             "edition": "STANDART",
             "info": "",
             "price": 60
         },
         "deluxe": {
             "img": "/main-img/ps5/last-of-us/ellie.jpg",
-            "name": "LAST OF US PART 2",
+            "name": "The Last of Us Part 2",
             "edition": "ELLIE",
             "info": "",
             "price": 70
         },
         "ultimate": {
             "img": "/main-img/ps5/last-of-us/collector.jpg",
-            "name": "LAST OF US PART 2",
+            "name": "The Last of Us Part 2",
             "edition": "COLLECTOR",
             "info": "",
             "price": 80
@@ -281,27 +281,27 @@
     {
         "id": 10,
         "title": "PS5",
-        "background-image": "/main-img/ps5/spiderman/background.jpeg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/ps5/spiderman/left.png",
-        "right-png": "/main-img/ps5/spiderman/right.png",
+        "background_image": "/main-img/ps5/spiderman/background.jpeg",
+        "iframe": "https://www.youtube.com/embed/qIQ3xNqkVC4",
+        "left_png": "/main-img/ps5/spiderman/left.png",
+        "right_png": "/main-img/ps5/spiderman/right.png",
         "standart": {
             "img": "/main-img/ps5/spiderman/standart.jpeg",
-            "name": "SPIDERMAN 2",
+            "name": "Spiderman 2",
             "edition": "STANDART",
             "info": "",
             "price": 60
         },
         "deluxe": {
             "img": "/main-img/ps5/spiderman/deluxe.jpg",
-            "name": "SPIDERMAN 2",
+            "name": "Spiderman 2",
             "edition": "DELUXE",
             "info": "",
             "price": 70
         },
         "ultimate": {
             "img": "/main-img/ps5/spiderman/collector.jpg",
-            "name": "SPIDERMAN 2",
+            "name": "Spiderman 2",
             "edition": "STANDART",
             "info": "",
             "price": 80
@@ -312,10 +312,10 @@
     {
         "id": 11,
         "title": "XBOX",
-        "background-image": "/main-img/xbox/forza-horizon/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/xbox/forza-horizon/left.png",
-        "right-png": "/main-img/xbox/forza-horizon/right.png",
+        "background_image": "/main-img/xbox/forza-horizon/background.jpg",
+        "iframe": "https://www.youtube.com/embed/FYH9n37B7Yw",
+        "left_png": "/main-img/xbox/forza-horizon/left.png",
+        "right_png": "/main-img/xbox/forza-horizon/right.png",
         "standart": {
             "img": "/main-img/xbox/forza-horizon/standart.jpg",
             "name": "Forza Horizon 5",
@@ -343,10 +343,10 @@
     {
         "id": 12,
         "title": "XBOX",
-        "background-image": "/main-img/xbox/gears/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/xbox/gears/left.png",
-        "right-png": "/main-img/xbox/gears/right.png",
+        "background_image": "/main-img/xbox/gears/background.jpg",
+        "iframe": "https://www.youtube.com/embed/h35_KOgslkM",
+        "left_png": "/main-img/xbox/gears/left.png",
+        "right_png": "/main-img/xbox/gears/right.png",
         "standart": {
             "img": "/main-img/xbox/gears/standart.jpg",
             "name": "Gears 5",
@@ -374,10 +374,10 @@
     {
         "id": 13,
         "title": "XBOX",
-        "background-image": "/main-img/xbox/halo-infinite/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/xbox/halo-infinite/left.png",
-        "right-png": "/main-img/xbox/halo-infinite/right.png",
+        "background_image": "/main-img/xbox/halo-infinite/background.jpg",
+        "iframe": "https://www.youtube.com/embed/PyMlV5_HRWk",
+        "left_png": "/main-img/xbox/halo-infinite/left.png",
+        "right_png": "/main-img/xbox/halo-infinite/right.png",
         "standart": {
             "img": "/main-img/xbox/halo-infinite/standart.jpg",
             "name": "Halo Infinite",
@@ -405,10 +405,10 @@
     {
         "id": 14,
         "title": "XBOX",
-        "background-image": "/main-img/xbox/ori/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/xbox/ori/left.png",
-        "right-png": "/main-img/xbox/ori/right.png",
+        "background_image": "/main-img/xbox/ori/background.jpg",
+        "iframe": "https://www.youtube.com/embed/2reK8k8nwBc",
+        "left_png": "/main-img/xbox/ori/left.png",
+        "right_png": "/main-img/xbox/ori/right.png",
         "standart": {
             "img": "/main-img/xbox/ori/standart.jpg",
             "name": "Ori and The Will of The Wisps",
@@ -436,10 +436,10 @@
     {
         "id": 15,
         "title": "XBOX",
-        "background-image": "/main-img/xbox/sea-of-thieves/background.jpg",
-        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
-        "left-png": "/main-img/xbox/sea-of-thieves/left.png",
-        "right-png": "/main-img/xbox/sea-of-thieves/right.png",
+        "background_image": "/main-img/xbox/sea-of-thieves/background.jpg",
+        "iframe": "https://www.youtube.com/embed/i8KVJGJQBPU",
+        "left_png": "/main-img/xbox/sea-of-thieves/left.png",
+        "right_png": "/main-img/xbox/sea-of-thieves/right.png",
         "standart": {
             "img": "/main-img/xbox/sea-of-thieves/standart.png",
             "name": "Sea of Thieves",
@@ -455,7 +455,7 @@
             "price": 70
         },
         "ultimate": {
-            "img": "/main-img/xbox/sea-of-thieves/deluxe.png",
+            "img": "/main-img/xbox/sea-of-thieves/deluxe.jpg",
             "name": "Sea of Thieves",
             "edition": "DELUXE",
             "info": "",
