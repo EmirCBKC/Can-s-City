@@ -72,7 +72,7 @@ fetch("/games.json")
             return `
             <div class="detail-background d-flex justify-content-center flex-column align-items-center" 
         style="background:linear-gradient(to top,rgba(0, 0, 0, 0.62) 25%,rgba(0, 0, 0, 0.277) 90%),url(${element.background_image});
-            background-position:20%;
+            background-position:100%;
             background-size:cover;
             width: 100%;
             height: auto;
