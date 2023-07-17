@@ -1,0 +1,467 @@
+[
+    {
+        "id": 1,
+        "title": "PC",
+        "background-image": "/main-img/pc/ac-mirage/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/pc/ac-mirage/left.png",
+        "right-png": "/main-img/pc/ac-mirage/right.png",
+        "standart": {
+            "img": "/main-img/pc/ac-mirage/standart.jpg",
+            "name": "Assassin's Creed Mirage",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/pc/ac-mirage/deluxe.png",
+            "name": "Assassin's Creed Mirage",
+            "edition": "DELUXE",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/pc/ac-mirage/collector.jpg",
+            "name": "Assassin's Creed Mirage",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/pc/ac-mirage/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 2,
+        "title": "PC",
+        "background-image": "/main-img/pc/gta-5/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/pc/gta-5/left.png",
+        "right-png": "/main-img/pc/gta-5/right.png",
+        "standart": {
+            "img": "/main-img/pc/gta-5/standart.jpg",
+            "name": "Grand Theft Auto 5",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/pc/gta-5/premium.png",
+            "name": "Grand Theft Auto 5",
+            "edition": "PREMIUM",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/pc/gta-5/collector.jpg",
+            "name": "Grand Theft Auto 5",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/pc/gta-5/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 3,
+        "title": "PC",
+        "background-image": "/main-img/pc/mortal-kombat/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/pc/mortal-kombat/left.png",
+        "right-png": "/main-img/pc/mortal-kombat/right.png",
+        "standart": {
+            "img": "/main-img/pc/mortal-kombat/standart.png",
+            "name": "Mortal Kombat 1",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/pc/mortal-kombat/premium.png",
+            "name": "Mortal Kombat 1",
+            "edition": "PREMIUM",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/pc/mortal-kombat/collector.png",
+            "name": "Mortal Kombat 1",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/pc/mortal-kombat/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 4,
+        "title": "PC",
+        "background-image": "/main-img/pc/nfs-unbound/background.png",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/pc/nfs-unbound/left.png",
+        "right-png": "/main-img/pc/nfs-unbound/right.png",
+        "standart": {
+            "img": "/main-img/pc/nfs-unbound/standart.jpg",
+            "name": "Need For Speed Unbound",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/pc/nfs-unbound/palace.jpg",
+            "name": "Need For Speed Unbound",
+            "edition": "PALACE",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/pc/nfs-unbound/collector.jpg",
+            "name": "Need For Speed Unbound",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/pc/nfs-unbound/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 5,
+        "title": "PC",
+        "background-image": "/main-img/pc/rdr-2/background.png",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/pc/rdr-2/left.png",
+        "right-png": "/main-img/pc/rdr-2/right.png",
+        "standart": {
+            "img": "/main-img/pc/rdr-2/standart.jpg",
+            "name": "Red Dead Redemption 2",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/pc/rdr-2/special.jpg",
+            "name": "Red Dead Redemption 2",
+            "edition": "SPECIAL",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/pc/rdr-2/ultimate.jpg",
+            "name": "Red Dead Redemption 2",
+            "edition": "ULTIMATE",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/pc/rdr-2/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 6,
+        "title": "PS5",
+        "background-image": "/main-img/ps5/ghost-of-Tsushima/background.png",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/ps5/ghost-of-Tsushima/left.png",
+        "right-png": "/main-img/ps5/ghost-of-Tsushima/right.png",
+        "standart": {
+            "img": "/main-img/ps5/ghost-of-Tsushima/special.jpg",
+            "name": "Ghost of Tsushima",
+            "edition": "SPECIAL",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/ps5/ghost-of-Tsushima/directors-cut.jpg",
+            "name": "Ghost of Tsushima",
+            "edition": "DIRECTOR'S CUT",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/ps5/ghost-of-Tsushima/collector.jpg",
+            "name": "Ghost of Tsushima",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/ps5/ghost-of-Tsushima/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 7,
+        "title": "PS5",
+        "background-image": "/main-img/ps5/god-of-war/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/ps5/god-of-war/left.png",
+        "right-png": "/main-img/ps5/god-of-war/right.png",
+        "standart": {
+            "img": "/main-img/ps5/god-of-war/deluxe.jpeg",
+            "name": "God of War",
+            "edition": "DELUXE",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/ps5/god-of-war/jotnar.jpg",
+            "name": "God of War",
+            "edition": "JOTNAR",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/ps5/god-of-war/collector.jpg",
+            "name": "God of War",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/ps5/god-of-war/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 8,
+        "title": "PS5",
+        "background-image": "/main-img/ps5/gran-tourismo/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/ps5/gran-tourismo/left.png",
+        "right-png": "/main-img/ps5/gran-tourismo/right.png",
+        "standart": {
+            "img": "/main-img/ps5/gran-tourismo/standart.jpeg",
+            "name": "Gran Turismo 7",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/ps5/gran-tourismo/launc.jpg",
+            "name": "Gran Turismo 7",
+            "edition": "LAUNCH",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/ps5/gran-tourismo/anniversary.jpg",
+            "name": "Gran Turismo 7",
+            "edition": "ANNIVERSARY",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/ps5/gran-tourismo/image.jpeg",
+        "about": ""
+    },
+    {
+        "id": 9,
+        "title": "PS5",
+        "background-image": "/main-img/ps5/last-of-us/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/ps5/last-of-us/left.png",
+        "right-png": "/main-img/ps5/last-of-us/right.png",
+        "standart": {
+            "img": "/main-img/ps5/last-of-us/standart.jpg",
+            "name": "LAST OF US PART 2",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/ps5/last-of-us/ellie.jpg",
+            "name": "LAST OF US PART 2",
+            "edition": "ELLIE",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/ps5/last-of-us/collector.jpg",
+            "name": "LAST OF US PART 2",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/ps5/last-of-us/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 10,
+        "title": "PS5",
+        "background-image": "/main-img/ps5/spiderman/background.jpeg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/ps5/spiderman/left.png",
+        "right-png": "/main-img/ps5/spiderman/right.png",
+        "standart": {
+            "img": "/main-img/ps5/spiderman/standart.jpeg",
+            "name": "SPIDERMAN 2",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/ps5/spiderman/deluxe.jpg",
+            "name": "SPIDERMAN 2",
+            "edition": "DELUXE",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/ps5/spiderman/collector.jpg",
+            "name": "SPIDERMAN 2",
+            "edition": "STANDART",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/ps5/spiderman/image.jpeg",
+        "about": ""
+    },
+    {
+        "id": 11,
+        "title": "XBOX",
+        "background-image": "/main-img/xbox/forza-horizon/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/xbox/forza-horizon/left.png",
+        "right-png": "/main-img/xbox/forza-horizon/right.png",
+        "standart": {
+            "img": "/main-img/xbox/forza-horizon/standart.jpg",
+            "name": "Forza Horizon 5",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/xbox/forza-horizon/deluxe.png",
+            "name": "Forza Horizon 5",
+            "edition": "DELUXE",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/xbox/forza-horizon/premium.jpg",
+            "name": "Forza Horizon 5",
+            "edition": "PREMIUM",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/xbox/forza-horizon/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 12,
+        "title": "XBOX",
+        "background-image": "/main-img/xbox/gears/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/xbox/gears/left.png",
+        "right-png": "/main-img/xbox/gears/right.png",
+        "standart": {
+            "img": "/main-img/xbox/gears/standart.jpg",
+            "name": "Gears 5",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/xbox/gears/goty.png",
+            "name": "Gears 5",
+            "edition": "GAME OF THE YEAR EDITION",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/xbox/gears/collector.png",
+            "name": "Gears 5",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/xbox/gears/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 13,
+        "title": "XBOX",
+        "background-image": "/main-img/xbox/halo-infinite/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/xbox/halo-infinite/left.png",
+        "right-png": "/main-img/xbox/halo-infinite/right.png",
+        "standart": {
+            "img": "/main-img/xbox/halo-infinite/standart.jpg",
+            "name": "Halo Infinite",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/xbox/halo-infinite/limited.jpg",
+            "name": "Halo Infinite",
+            "edition": "LIMITED",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/xbox/halo-infinite/collector.jpg",
+            "name": "Halo Infinite",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/xbox/halo-infinite/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 14,
+        "title": "XBOX",
+        "background-image": "/main-img/xbox/ori/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/xbox/ori/left.png",
+        "right-png": "/main-img/xbox/ori/right.png",
+        "standart": {
+            "img": "/main-img/xbox/ori/standart.jpg",
+            "name": "Ori and The Will of The Wisps",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/xbox/ori/definitive.jpg",
+            "name": "Ori and The Will of The Wisps",
+            "edition": "DEFINITIVE",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/xbox/ori/collector.jpg",
+            "name": "Ori and The Will of The Wisps",
+            "edition": "COLLECTOR",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/xbox/ori/image.jpg",
+        "about": ""
+    },
+    {
+        "id": 15,
+        "title": "XBOX",
+        "background-image": "/main-img/xbox/sea-of-thieves/background.jpg",
+        "iframe": "https://www.youtube.com/embed/G97lx7orMN8",
+        "left-png": "/main-img/xbox/sea-of-thieves/left.png",
+        "right-png": "/main-img/xbox/sea-of-thieves/right.png",
+        "standart": {
+            "img": "/main-img/xbox/sea-of-thieves/standart.png",
+            "name": "Sea of Thieves",
+            "edition": "STANDART",
+            "info": "",
+            "price": 60
+        },
+        "deluxe": {
+            "img": "/main-img/xbox/sea-of-thieves/special.png",
+            "name": "Sea of Thieves",
+            "edition": "SPECIAL",
+            "info": "",
+            "price": 70
+        },
+        "ultimate": {
+            "img": "/main-img/xbox/sea-of-thieves/deluxe.png",
+            "name": "Sea of Thieves",
+            "edition": "DELUXE",
+            "info": "",
+            "price": 80
+        },
+        "image": "/main-img/xbox/sea-of-thieves/image.jpg",
+        "about": ""
+    }
+]
