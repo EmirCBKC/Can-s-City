@@ -18,8 +18,10 @@ body{
 }
 
 .nav {
+    position: fixed;
     width: 100%;
     height: auto;
+    z-index: 999;
 }
 
 nav {
@@ -98,7 +100,30 @@ li a:hover {
     color: #00ffff !important;
     animation: NavClick 2s infinite;
 }
-
+.basket-content {
+    display: none;
+    width: 25rem;
+    height: 0rem;
+    background-color: #000000e3;
+    border: 2px solid #00ffff;
+    border-radius: 0px 0px 30px 30px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
+    animation: BasketOpenAni 5s forwards;
+}
+@keyframes BasketOpenAni {
+    0%{
+        height: 0rem;
+    }
+    50%{
+        height: 35rem;
+    }
+    100%{
+        height: 35rem;
+    }
+}
 /******************************************* NAVBAR-CSS-END ***********************************************/
 
 /******************************************* HOME-CSS-START ************************************************/

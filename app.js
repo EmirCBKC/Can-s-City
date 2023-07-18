@@ -296,3 +296,18 @@ fetch("/games.json")
         }).join("");
         document.querySelector("#detail").innerHTML = goDetail;
     });
+
+//! BASKET => Navbar
+let basket=document.querySelector("#basket");
+let basketContent=document.querySelector(".basket-content");
+basketContent.style.display="none";
+basket.addEventListener("click",()=>{
+    if (basketContent.style.display=="none") 
+    {
+        basketContent.style.display="block"
+    }
+    else if(basketContent.style.display="block")
+    {
+        basketContent.style.display = "none";
+    }
+});
