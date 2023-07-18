@@ -10,7 +10,8 @@ fetch("/games.json")
                 <img src="${element.standart.img}" width="100%" height="400px">
                 <h1 class="text-center mt-2">${element.standart.name}</h1>
                 <h2 class="text-center price mt-2">${element.standart.price}$</h2>
-                <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
+                <a href="/detail.html?id=${element.id}" class="btn btn-light mt-2">Go detail</a>
+                <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
             </div>
         </div>
     </div>
@@ -33,6 +34,7 @@ fetch("/games.json")
                         <h1 class="text-center mt-2">${element.standart.name}</h1>
                         <h2 class="text-center price mt-2">${element.standart.price}$</h2>
                         <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
+                        <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
                     </div>
                 </div>
             </div>
@@ -40,6 +42,46 @@ fetch("/games.json")
             }).join("");
             document.querySelector("#pc").innerHTML = filteredPcGame;
         });
+
+        //! PC BASKET => Add Game
+        let basketPcItems = []; // Sepetteki ürünleri tutan liste
+
+        // Sepet içeriğini güncelleyen fonksiyon
+        function updatePcBasket() {
+            let basketPcGame = basketPcItems.map(element => {
+                return `
+                <div class="basket-game m-auto mt-3 p-2 row">
+                    <div class="basket-left col-xxl-4 col-xl-4 ">
+                    </div>
+                    <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
+                        <h3>${element.standart.name}</h3>
+                        <h4>${element.standart.edition}</h4>
+                        <h4>${element.standart.price}</h4>
+                        <button class="btn btn-danger remove-button">Remove Basket</button>
+                    </div>
+                </div>`;
+            }).join("");
+            document.querySelector(".basket-content").innerHTML = basketPcGame;
+            // Remove butonlarına dinleyici ekleme
+            let removePcGame = document.querySelectorAll(".remove-button");
+            removePcGame.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    basketPcItems.splice(index, 1); // Ürünü sepet listesinden kaldırma
+                    updatePcBasket(); // Sepet içeriğini güncelleme
+                });
+            });
+        }
+
+        onlyPc.forEach(element => {
+            let addPc = document.getElementById(element.id);
+            addPc.addEventListener("click", (e) => {
+                let addPcGame = onlyPc.find(item => item.id == e.target.id); // Tekil ürünü bulma
+                basketPcItems.push(addPcGame); // Ürünü sepet listesine ekleme
+                // Sepet içeriğini güncelleyen fonksiyonu çağırma
+                updatePcBasket();
+            });
+        });
+
     });
 
 //! PS5 GAMES => PS5 Page
@@ -49,12 +91,13 @@ fetch("/games.json")
         let onlyPs5 = data.filter(element => element.title == "PS5");
         let ps5Data = onlyPs5.map(element => {
             return `<div class="mt-5 mb-5 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="pc-game d-flex flex-column align-items-center">
+        <div class="ps5-game d-flex flex-column align-items-center">
             <div class="p-4 d-flex flex-column align-items-center">
                 <img src="${element.standart.img}" width="100%" height="400px">
                 <h1 class="text-center mt-2">${element.standart.name}</h1>
                 <h2 class="text-center price mt-2">${element.standart.price}$</h2>
                 <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
+                <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
             </div>
         </div>
     </div>
@@ -71,12 +114,13 @@ fetch("/games.json")
             });
             let filteredPs5Game = filterPs5Game.map(element => {
                 return `<div class="mt-5 mb-5 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="pc-game d-flex flex-column align-items-center">
+                <div class="ps5-game d-flex flex-column align-items-center">
                     <div class="p-4 d-flex flex-column align-items-center">
                         <img src="${element.standart.img}" width="100%" height="400px">
                         <h1 class="text-center mt-2">${element.standart.name}</h1>
                         <h2 class="text-center price mt-2">${element.standart.price}$</h2>
                         <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
+                        <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
                     </div>
                 </div>
             </div>
@@ -84,6 +128,43 @@ fetch("/games.json")
             }).join("");
             document.querySelector("#ps5").innerHTML = filteredPs5Game;
         });
+
+        //! PS5 BASKET => Add Game
+        let basketPs5Items = [];
+
+        function updatePs5Basket() {
+            let basketPs5Game = basketPs5Items.map(element => {
+                return `<div class="basket-game m-auto mt-3 p-2 row">
+                <div class="basket-left col-xxl-4 col-xl-4 ">
+                </div>
+                <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
+                    <h3>${element.standart.name}</h3>
+                    <h4>${element.standart.edition}</h4>
+                    <h4>${element.standart.price}</h4>
+                    <button class="btn btn-danger remove-button">Remove Basket</button>
+                </div>
+            </div>
+                `;
+            }).join("");
+            document.querySelector(".basket-content").innerHTML = basketPs5Game;
+            let removePs5Game=document.querySelectorAll(".remove-button");
+            removePs5Game.forEach((button,index) => {
+                button.addEventListener("click",()=>{
+                    basketPs5Items.splice(index,1);
+                    updatePs5Basket();
+                });
+            });
+        }
+
+        onlyPs5.forEach(element => {
+            let addPs5 = document.getElementById(element.id);
+            addPs5.addEventListener("click", (e) => {
+                let addPs5Game = onlyPs5.find(element => element.id == e.target.id);
+                basketPs5Items.push(addPs5Game);
+                updatePs5Basket();
+            })
+        });
+
     });
 
 //! XBOX GAMES => XBOX Page
@@ -93,12 +174,13 @@ fetch("/games.json")
         let onlyXbox = data.filter(element => element.title == "XBOX");
         let xboxData = onlyXbox.map(element => {
             return `<div class="mt-5 mb-5 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="pc-game d-flex flex-column align-items-center">
+        <div class="xbox-game d-flex flex-column align-items-center">
             <div class="p-4 d-flex flex-column align-items-center">
                 <img src="${element.standart.img}" width="100%" height="400px">
                 <h1 class="text-center mt-2">${element.standart.name}</h1>
                 <h2 class="text-center price mt-2">${element.standart.price}$</h2>
                 <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
+                <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
             </div>
         </div>
     </div>
@@ -121,6 +203,7 @@ fetch("/games.json")
                         <h1 class="text-center mt-2">${element.standart.name}</h1>
                         <h2 class="text-center price mt-2">${element.standart.price}$</h2>
                         <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
+                        <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
                     </div>
                 </div>
             </div>
@@ -128,6 +211,43 @@ fetch("/games.json")
             }).join("");
             document.querySelector("#xbox").innerHTML = filteredXboxGame;
         });
+
+        //! XBOX BASKET => Add Game
+        let basketXboxItems = [];
+
+        function updateXboxBasket() {
+            let basketXboxGame = basketXboxItems.map(element => {
+                return `<div class="basket-game m-auto mt-3 p-2 row">
+                <div class="basket-left col-xxl-4 col-xl-4 ">
+                </div>
+                <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
+                    <h3>${element.standart.name}</h3>
+                    <h4>${element.standart.edition}</h4>
+                    <h4>${element.standart.price}</h4>
+                    <button class="btn btn-danger remove-button">Remove Basket</button>
+                </div>
+            </div>
+                `;
+            }).join("");
+            document.querySelector(".basket-content").innerHTML = basketXboxGame;
+            let removeXboxGame=document.querySelectorAll(".remove-button");
+            removeXboxGame.forEach((button,index) => {
+                button.addEventListener("click",()=>{
+                    basketXboxItems.splice(index,1);
+                    updateXboxBasket();
+                });
+            });
+        }
+
+        onlyXbox.forEach(element => {
+            let addXbox = document.getElementById(element.id);
+            addXbox.addEventListener("click", (e) => {
+                let addXboxGame = onlyXbox.find(element => element.id == e.target.id);
+                basketXboxItems.push(addXboxGame);
+                updateXboxBasket();
+            })
+        });
+
     });
 
 //! GO DETAIL => Detail Page
@@ -205,7 +325,7 @@ fetch("/games.json")
                                             minima porro tempore.</li>
                                     </ul>
                                     <h2 class="text-center price mt-2">${element.standart.price}$</h2>
-                                    <a href="" class="btn btn-light">Buy</a>
+                                    <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +351,7 @@ fetch("/games.json")
                                             minima porro tempore.</li>
                                     </ul>
                                     <h2 class="text-center price mt-2">${element.deluxe.price}$</h2>
-                                    <a href="" class="btn btn-light">Buy</a>
+                                    <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
                                 </div>
                             </div>
                         </div>
@@ -257,7 +377,7 @@ fetch("/games.json")
                                             minima porro tempore.</li>
                                     </ul>
                                     <h2 class="text-center price mt-2">${element.ultimate.price}$</h2>
-                                    <a href="" class="btn btn-light">Buy</a>
+                                    <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
                                 </div>
                             </div>
                         </div>
@@ -298,16 +418,14 @@ fetch("/games.json")
     });
 
 //! BASKET => Navbar
-let basket=document.querySelector("#basket");
-let basketContent=document.querySelector(".basket-content");
-basketContent.style.display="none";
-basket.addEventListener("click",()=>{
-    if (basketContent.style.display=="none") 
-    {
-        basketContent.style.display="block"
+let basket = document.querySelector("#basket");
+let basketContent = document.querySelector(".basket-content");
+basketContent.style.display = "none";
+basket.addEventListener("click", () => {
+    if (basketContent.style.display == "none") {
+        basketContent.style.display = "block"
     }
-    else if(basketContent.style.display="block")
-    {
+    else if (basketContent.style.display = "block") {
         basketContent.style.display = "none";
     }
 });

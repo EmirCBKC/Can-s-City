@@ -4,8 +4,9 @@
     font-family: 'Chakra Petch', sans-serif;
     list-style: none;
 }
-body{
-    background-color: #000000!important;
+
+body {
+    background-color: #000000 !important;
 }
 
 /******************************************* NAVBAR-CSS-START ***********************************************/
@@ -30,22 +31,22 @@ nav {
     background-color: black;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
     background-color: #00ffff;
     border-radius: 5px;
 }
 
-.navbar-brand{
-    color: aqua!important;
+.navbar-brand {
+    color: aqua !important;
     text-shadow: 2px 2px 2px aqua;
-    font-size: 40px!important;
+    font-size: 40px !important;
 }
 
 .navbar-brand:hover {
     animation: NavClick 2s infinite;
 }
 
-.navbar-collapse{
+.navbar-collapse {
     text-align: center;
 }
 
@@ -92,7 +93,7 @@ ul {
 
 nav li a {
     text-decoration: none;
-    font-size: 20px!important;
+    font-size: 20px !important;
     text-shadow: 1px 1px 1px rgb(0, 255, 255);
 }
 
@@ -100,9 +101,10 @@ li a:hover {
     color: #00ffff !important;
     animation: NavClick 2s infinite;
 }
+
 .basket-content {
     display: none;
-    width: 25rem;
+    width: 35rem;
     height: 0rem;
     background-color: #000000e3;
     border: 2px solid #00ffff;
@@ -113,17 +115,30 @@ li a:hover {
     z-index: 999;
     animation: BasketOpenAni 5s forwards;
 }
-@keyframes BasketOpenAni {
-    0%{
-        height: 0rem;
-    }
-    50%{
-        height: 35rem;
-    }
-    100%{
-        height: 35rem;
-    }
+
+.basket-game {
+    opacity: 0;
+    width: 90%;
+    height: 10rem;
+    background-color: #00ffff;
+    border-radius: 15px;
+    border: 2px solid black;
+    animation: BasketGameAni 9s forwards;
 }
+
+.basket-left {
+    background-image: url(/main-img/pc/ac-mirage/standart.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.basket-right h3,
+.basket-right h4 {
+    font-size: 23px;
+}
+
 /******************************************* NAVBAR-CSS-END ***********************************************/
 
 /******************************************* HOME-CSS-START ************************************************/
@@ -249,22 +264,25 @@ li a:hover {
 /******************************************* HOME-CSS-END ************************************************/
 
 /******************************************* PC-CSS-START ************************************************/
-.header img{
+.header img {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
+
 .pc-background {
     background-image: linear-gradient(to top, #170029 10%, #100d26d3 37%, #004692 49%, #600d00 60%, #000000 90%);
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
 }
-.pc-filter{
+
+.pc-filter {
     background-color: #000000ad;
     border-radius: 30px;
     width: 60%;
     height: 10rem;
 }
-.pc-filter a{
+
+.pc-filter a {
     background-color: #b56600;
     border-radius: 30px;
     width: 25%;
@@ -274,12 +292,14 @@ li a:hover {
     color: white;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.pc-filter a:hover{
+
+.pc-filter a:hover {
     background-color: rgb(255, 204, 0);
     color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.pc-filter input{
+
+.pc-filter input {
     width: 20%;
     height: 40%;
     border-radius: 20px;
@@ -288,7 +308,7 @@ li a:hover {
     background-color: rgb(255, 204, 0);
 }
 
-.pc-content{
+.pc-content {
     z-index: 2;
     position: relative;
     width: 100%;
@@ -297,26 +317,36 @@ li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.pc-game{
+
+.pc-game {
     border: 4px solid #00ffff;
     background-image: linear-gradient(0deg, #26000d5a 40%, #b5fffd51 100%);
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.pc-game img{
+
+.pc-game img {
     border-radius: 30px;
     border: 2px solid white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.pc-game h1,.pc-game h2{
+
+.pc-game h1 {
+    font-size: 35px;
+}
+
+.pc-game h1,
+.pc-game h2 {
     color: white;
 }
-.pc-game a{
+
+.pc-game a {
     border: none;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.pc-game a:hover{
+
+.pc-game a:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #008692;
     color: #000516;
@@ -332,13 +362,15 @@ li a:hover {
     height: auto;
     background-repeat: no-repeat;
 }
-.ps5-filter{
+
+.ps5-filter {
     background-color: #4a4a4ab3;
     border-radius: 30px;
     width: 60%;
     height: 10rem;
 }
-.ps5-filter a{
+
+.ps5-filter a {
     background-color: rgb(18, 18, 18);
     border-radius: 30px;
     width: 25%;
@@ -348,12 +380,14 @@ li a:hover {
     color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.ps5-filter a:hover{
+
+.ps5-filter a:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.ps5-filter input{
+
+.ps5-filter input {
     width: 20%;
     height: 40%;
     border-radius: 20px;
@@ -361,7 +395,7 @@ li a:hover {
     font-size: 25px;
 }
 
-.ps5-content{
+.ps5-content {
     z-index: 2;
     position: relative;
     width: 100%;
@@ -370,26 +404,36 @@ li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.ps5-game{
+
+.ps5-game {
     border: 4px solid #00ffff;
     background-image: linear-gradient(0deg, #0000005a 40%, #ffffffab 100%);
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.ps5-game img{
+
+.ps5-game img {
     border-radius: 30px;
     border: 2px solid white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.ps5-game h1,.ps5-game h2{
+
+.ps5-game h1 {
+    font-size: 35px;
+}
+
+.ps5-game h1,
+.ps5-game h2 {
     color: white;
 }
-.ps5-game a{
+
+.ps5-game a {
     border: none;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.ps5-game a:hover{
+
+.ps5-game a:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #008692;
     color: #000516;
@@ -406,13 +450,15 @@ li a:hover {
     height: auto;
     background-repeat: no-repeat;
 }
-.xbox-filter{
+
+.xbox-filter {
     background-color: #000000b3;
     border-radius: 30px;
     width: 60%;
     height: 10rem;
 }
-.xbox-filter a{
+
+.xbox-filter a {
     background-color: rgb(18, 18, 18);
     border-radius: 30px;
     width: 25%;
@@ -422,12 +468,14 @@ li a:hover {
     color: #1ac12e;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.xbox-filter a:hover{
+
+.xbox-filter a:hover {
     background-color: #1ac12e;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.xbox-filter input{
+
+.xbox-filter input {
     width: 20%;
     height: 40%;
     border-radius: 20px;
@@ -436,7 +484,7 @@ li a:hover {
     background-color: #1ac12e;
 }
 
-.xbox-content{
+.xbox-content {
     z-index: 2;
     position: relative;
     width: 100%;
@@ -445,27 +493,37 @@ li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.xbox-game{
+
+.xbox-game {
     border: 4px solid #00ffff;
     background-image: linear-gradient(0deg, #0000005a 40%, #ffffffab 100%);
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.xbox-game img{
+
+.xbox-game img {
     border-radius: 30px;
     border: 2px solid #1ac12e;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.xbox-game h1,.xbox-game h2{
+
+.xbox-game h1 {
+    font-size: 35px;
+}
+
+.xbox-game h1,
+.xbox-game h2 {
     color: #1ac12e;
 }
-.xbox-game a{
+
+.xbox-game a {
     background-color: #1ac12e;
     border: none;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.xbox-game a:hover{
+
+.xbox-game a:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #008692;
     color: #000516;
@@ -475,121 +533,144 @@ li a:hover {
 /******************************************* XBOX-CSS-END ************************************************/
 
 /******************************************* DETAIL-CSS-START ************************************************/
-.brand{
+.brand {
     font-size: 80px;
     text-shadow: 5px 5px 5px white;
 }
-.detail-content{
+
+.detail-content {
     width: 97%;
     height: auto;
 }
 
-iframe{
+iframe {
     border-radius: 40px;
 }
-.standart-detail{
+
+.standart-detail {
     width: 100%;
     height: 40rem;
 }
-.deluxe-detail{
+
+.deluxe-detail {
     width: 100%;
     height: 40rem;
     background-color: rgba(189, 123, 0, 0.289);
     border-radius: 40px;
 }
-.ultimate-detail{
+
+.ultimate-detail {
     width: 100%;
     height: 40rem;
     background-color: rgba(0, 0, 0, 0.27);
     border-radius: 40px;
 }
-.standart-game h2{
+
+.standart-game h2 {
     color: white;
 }
-.standart-game ul li{
+
+.standart-game ul li {
     color: white;
     font-size: 15px;
-    list-style:square;
+    list-style: square;
 }
-.standart-game a{
+
+.standart-game a {
     width: 50%;
     border: none;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.standart-game a:hover{
+
+.standart-game a:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #008692;
     color: #000516;
 }
-.s-game{
-    background:linear-gradient(to top,rgba(0, 0, 0, 0.53) 10%,rgba(0, 0, 0, 0.73)40%,rgba(0, 0, 0, 0.93)65%);
+
+.s-game {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.53) 10%, rgba(0, 0, 0, 0.73)40%, rgba(0, 0, 0, 0.93)65%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 40px;
 }
-.deluxe-game h2{
+
+.deluxe-game h2 {
     color: white;
 }
-.deluxe-game ul li{
+
+.deluxe-game ul li {
     color: white;
     font-size: 15px;
-    list-style:square;
+    list-style: square;
 }
-.deluxe-game a{
+
+.deluxe-game a {
     width: 50%;
     border: none;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.deluxe-game a:hover{
+
+.deluxe-game a:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #008692;
     color: #000516;
 }
-.d-game{
-    background:linear-gradient(to top,rgba(0, 0, 0, 0.53) 10%,rgba(0, 0, 0, 0.73)40%,rgba(0, 0, 0, 0.93)65%);
+
+.d-game {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.53) 10%, rgba(0, 0, 0, 0.73)40%, rgba(0, 0, 0, 0.93)65%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 40px;
 }
-.ultimate-game h2{
+
+.ultimate-game h2 {
     color: white;
 }
-.ultimate-game ul li{
+
+.ultimate-game ul li {
     color: white;
     font-size: 15px;
-    list-style:square;
+    list-style: square;
 }
-.ultimate-game a{
+
+.ultimate-game a {
     width: 50%;
     border: none;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.ultimate-game a:hover{
+
+.ultimate-game a:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #008692;
     color: #000516;
 }
-.u-game{
-    background:linear-gradient(to top,rgba(0, 0, 0, 0.53) 10%,rgba(0, 0, 0, 0.73)40%,rgba(0, 0, 0, 0.93)65%);
+
+.u-game {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.53) 10%, rgba(0, 0, 0, 0.73)40%, rgba(0, 0, 0, 0.93)65%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 40px;
 }
-.edition{
+
+.edition {
     font-size: 40px;
     color: white;
 }
-.about-detail{
+
+.about-detail {
     width: 100%;
     height: auto;
     background-color: rgba(0, 0, 0, 0.787);
     border-radius: 40px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.about-detail p{
+
+.about-detail p {
     font-size: 25px;
     color: white;
 }
+
 /******************************************* DETAIL-CSS-END ************************************************/
 
 /******************************************* FOOTER-CSS-START ***********************************************/
@@ -625,6 +706,30 @@ footer h2 {
 /******************************************* FOOTER-CSS-END ***********************************************/
 
 /******************************************* Animation-Start ****************************************************/
+@keyframes BasketGameAni {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes BasketOpenAni {
+    0% {
+        height: 0rem;
+    }
+
+    50% {
+        height: 35rem;
+    }
+
+    100% {
+        height: 35rem;
+    }
+}
 
 @keyframes AccordionAni {
     0% {
@@ -639,6 +744,7 @@ footer h2 {
         box-shadow: rgba(0, 255, 255, 0.3) 0px 5px, rgba(0, 255, 255, 0.2) 0px 10px, rgba(0, 255, 255, 0.1) 0px 15px, rgba(0, 255, 255, 0.07) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
     }
 }
+
 @keyframes CarouselAni {
     0% {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 5px, rgba(0, 0, 0, 0.2) 0px 10px, rgba(0, 0, 0, 0.1) 0px 15px, rgba(0, 0, 0, 0.07) 0px 20px, rgba(0, 0, 0, 0.05) 0px 25px;
@@ -652,6 +758,7 @@ footer h2 {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 5px, rgba(0, 0, 0, 0.2) 0px 10px, rgba(0, 0, 0, 0.1) 0px 15px, rgba(0, 0, 0, 0.07) 0px 20px, rgba(0, 0, 0, 0.05) 0px 25px;
     }
 }
+
 @keyframes NavClick {
     0% {
         text-shadow: 2px 2px 2px aqua;
@@ -665,6 +772,7 @@ footer h2 {
         text-shadow: 2px 2px 2px aqua;
     }
 }
+
 @keyframes FooterAni {
     0% {
         box-shadow: rgba(0, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.3) 0px 18px 36px -18px inset;
@@ -683,16 +791,18 @@ footer h2 {
 
 /************************************* Media-Responsive ******************************************************/
 @media (max-width:750px) {
-    .pc-filter{
+    .pc-filter {
         width: 90%;
         height: 5rem;
         background-color: #214848;
     }
-    .pc-filter a{
+
+    .pc-filter a {
         width: 30%;
         height: 50%;
     }
-    .pc-filter input{
+
+    .pc-filter input {
         width: 30%;
         height: 50%;
     }
