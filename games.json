@@ -11,7 +11,7 @@
             "name": "Assassin's Creed Mirage",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 70
         },
         "deluxe": {
             "img": "/main-img/pc/ac-mirage/deluxe.png",
@@ -42,12 +42,12 @@
             "name": "Grand Theft Auto 5",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 50
         },
         "deluxe": {
             "img": "/main-img/pc/gta-5/premium.png",
             "name": "Grand Theft Auto 5",
-            "edition": "PREMIUM",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -73,12 +73,12 @@
             "name": "Mortal Kombat 1",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 80
         },
         "deluxe": {
             "img": "/main-img/pc/mortal-kombat/premium.png",
             "name": "Mortal Kombat 1",
-            "edition": "PREMIUM",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -104,12 +104,12 @@
             "name": "Need For Speed Unbound",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 65
         },
         "deluxe": {
             "img": "/main-img/pc/nfs-unbound/palace.jpg",
             "name": "Need For Speed Unbound",
-            "edition": "PALACE",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -140,14 +140,14 @@
         "deluxe": {
             "img": "/main-img/pc/rdr-2/special.jpg",
             "name": "Red Dead Redemption 2",
-            "edition": "SPECIAL",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
         "ultimate": {
             "img": "/main-img/pc/rdr-2/ultimate.jpg",
             "name": "Red Dead Redemption 2",
-            "edition": "ULTIMATE",
+            "edition": "COLLECTOR",
             "info": "",
             "price": 80
         },
@@ -164,14 +164,14 @@
         "standart": {
             "img": "/main-img/ps5/ghost-of-Tsushima/special.jpg",
             "name": "Ghost of Tsushima",
-            "edition": "SPECIAL",
+            "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 55
         },
         "deluxe": {
             "img": "/main-img/ps5/ghost-of-Tsushima/directors-cut.jpg",
             "name": "Ghost of Tsushima",
-            "edition": "DIRECTOR'S CUT",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -195,14 +195,14 @@
         "standart": {
             "img": "/main-img/ps5/god-of-war/deluxe.jpeg",
             "name": "God of War",
-            "edition": "DELUXE",
+            "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 90
         },
         "deluxe": {
             "img": "/main-img/ps5/god-of-war/jotnar.jpg",
             "name": "God of War",
-            "edition": "JOTNAR",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -228,19 +228,19 @@
             "name": "Gran Turismo 7",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 65
         },
         "deluxe": {
             "img": "/main-img/ps5/gran-tourismo/launc.jpg",
             "name": "Gran Turismo 7",
-            "edition": "LAUNCH",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
         "ultimate": {
             "img": "/main-img/ps5/gran-tourismo/anniversary.jpg",
             "name": "Gran Turismo 7",
-            "edition": "ANNIVERSARY",
+            "edition": "COLLECTOR",
             "info": "",
             "price": 80
         },
@@ -259,12 +259,12 @@
             "name": "The Last of Us Part 2",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 75
         },
         "deluxe": {
             "img": "/main-img/ps5/last-of-us/ellie.jpg",
             "name": "The Last of Us Part 2",
-            "edition": "ELLIE",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -302,7 +302,7 @@
         "ultimate": {
             "img": "/main-img/ps5/spiderman/collector.jpg",
             "name": "Spiderman 2",
-            "edition": "STANDART",
+            "edition": "COLLECTOR",
             "info": "",
             "price": 80
         },
@@ -333,7 +333,7 @@
         "ultimate": {
             "img": "/main-img/xbox/forza-horizon/premium.jpg",
             "name": "Forza Horizon 5",
-            "edition": "PREMIUM",
+            "edition": "COLLECTOR",
             "info": "",
             "price": 80
         },
@@ -352,12 +352,12 @@
             "name": "Gears 5",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 45
         },
         "deluxe": {
             "img": "/main-img/xbox/gears/goty.png",
             "name": "Gears 5",
-            "edition": "GAME OF THE YEAR EDITION",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -383,12 +383,12 @@
             "name": "Halo Infinite",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 65
         },
         "deluxe": {
             "img": "/main-img/xbox/halo-infinite/limited.jpg",
             "name": "Halo Infinite",
-            "edition": "LIMITED",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -414,12 +414,12 @@
             "name": "Ori and The Will of The Wisps",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 55
         },
         "deluxe": {
             "img": "/main-img/xbox/ori/definitive.jpg",
             "name": "Ori and The Will of The Wisps",
-            "edition": "DEFINITIVE",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
@@ -445,19 +445,19 @@
             "name": "Sea of Thieves",
             "edition": "STANDART",
             "info": "",
-            "price": 60
+            "price": 50
         },
         "deluxe": {
             "img": "/main-img/xbox/sea-of-thieves/special.png",
             "name": "Sea of Thieves",
-            "edition": "SPECIAL",
+            "edition": "DELUXE",
             "info": "",
             "price": 70
         },
         "ultimate": {
             "img": "/main-img/xbox/sea-of-thieves/deluxe.jpg",
             "name": "Sea of Thieves",
-            "edition": "DELUXE",
+            "edition": "COLLECTOR",
             "info": "",
             "price": 80
         },

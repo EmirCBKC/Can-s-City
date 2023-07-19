@@ -283,7 +283,7 @@ li a:hover {
     height: 10rem;
 }
 
-.pc-filter a {
+.pc-filter button{
     background-color: #b56600;
     border-radius: 30px;
     width: 25%;
@@ -293,8 +293,7 @@ li a:hover {
     color: white;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
-.pc-filter a:hover {
+.pc-filter button:hover{
     background-color: rgb(255, 204, 0);
     color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -370,8 +369,7 @@ li a:hover {
     width: 60%;
     height: 10rem;
 }
-
-.ps5-filter a {
+.ps5-filter button{
     background-color: rgb(18, 18, 18);
     border-radius: 30px;
     width: 25%;
@@ -381,8 +379,7 @@ li a:hover {
     color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
-.ps5-filter a:hover {
+.ps5-filter button:hover{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -458,8 +455,7 @@ li a:hover {
     width: 60%;
     height: 10rem;
 }
-
-.xbox-filter a {
+.xbox-filter button{
     background-color: rgb(18, 18, 18);
     border-radius: 30px;
     width: 25%;
@@ -469,8 +465,7 @@ li a:hover {
     color: #1ac12e;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
-.xbox-filter a:hover {
+.xbox-filter button:hover {
     background-color: #1ac12e;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
