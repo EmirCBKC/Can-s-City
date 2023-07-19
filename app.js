@@ -43,17 +43,21 @@ fetch("/games.json")
             document.querySelector("#pc").innerHTML = filteredPcGame;
         });
 
-        //! PC BASKET => Add Game
-        let basketPcItems = []; // Sepetteki ürünleri tutan liste
+        //! PC BASKET
+        let basketItems = []; // Sepetteki ürünleri tutan liste
 
         // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
         let savedBasket = localStorage.getItem("Saved Basket");
-        basketPcItems=JSON.parse(savedBasket);
-        updatePcBasket();
+        basketItems = JSON.parse(savedBasket);
+        updateBasket();
 
+        function saveBasket() {
+            let savedBasket = JSON.stringify(basketItems);
+            localStorage.setItem("Saved Basket", savedBasket);
+        }
         // Sepet içeriğini güncelleyen fonksiyon
-        function updatePcBasket() {
-            let basketPcGame = basketPcItems.map(element => {
+        function updateBasket() {
+            let basketGame = basketItems.map(element => {
                 return `
       <div class="basket-game m-auto mt-3 p-2 row">
         <div class="basket-left col-xxl-4 col-xl-4">
@@ -66,32 +70,32 @@ fetch("/games.json")
         </div>
       </div>`;
             }).join("");
-            document.querySelector(".basket-content").innerHTML = basketPcGame;
+            document.querySelector(".basket-content").innerHTML = basketGame;
 
             // Remove butonlarına dinleyici ekleme
-            let removePcGame = document.querySelectorAll(".remove-button");
-            removePcGame.forEach((button, index) => {
+            let removeGame = document.querySelectorAll(".remove-button");
+            removeGame.forEach((button, index) => {
                 button.addEventListener("click", () => {
-                    basketPcItems.splice(index, 1); // Ürünü sepet listesinden kaldırma
-                    updatePcBasket(); // Sepet içeriğini güncelleme
+                    basketItems.splice(index, 1); // Ürünü sepet listesinden kaldırma
+                    updateBasket(); // Sepet içeriğini güncelleme
+                    saveBasket();
                 });
             });
         }
+        let basketPc = data.filter(element => element.title == "PC");
 
-        onlyPc.forEach(element => {
-            let addPc = document.getElementById(element.id);
-            addPc.addEventListener("click", (e) => {
-                let addPcGame = onlyPc.find(item => item.id == e.target.id); // Tekil ürünü bulma
-                basketPcItems.push(addPcGame); // Ürünü sepet listesine ekleme
+        basketPc.forEach(element => {
+            let add = document.getElementById(element.id);
+            add.addEventListener("click", (e) => {
+                let addGame = basketPc.find(item => item.id == e.target.id); // Tekil ürünü bulma
+                basketItems.push(addGame); // Ürünü sepet listesine ekleme
                 // Sepet içeriğini güncelleyen fonksiyonu çağırma
-                updatePcBasket();
+                updateBasket();
 
                 // Sepet içeriğini local storage'a kaydet
-                let savedBasket = JSON.stringify(basketPcItems);
-                localStorage.setItem("Saved Basket", savedBasket);
+                saveBasket();
             });
         });
-
 
     });
 
@@ -140,40 +144,58 @@ fetch("/games.json")
             document.querySelector("#ps5").innerHTML = filteredPs5Game;
         });
 
-        //! PS5 BASKET => Add Game
-        let basketPs5Items = [];
+        //! PS5 BASKET
+        let basketItems = []; // Sepetteki ürünleri tutan liste
 
-        function updatePs5Basket() {
-            let basketPs5Game = basketPs5Items.map(element => {
-                return `<div class="basket-game m-auto mt-3 p-2 row">
-                <div class="basket-left col-xxl-4 col-xl-4 ">
+        // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
+        let savedBasket = localStorage.getItem("Saved Basket");
+        basketItems = JSON.parse(savedBasket);
+        updateBasket();
+
+        function saveBasket() {
+            let savedBasket = JSON.stringify(basketItems);
+            localStorage.setItem("Saved Basket", savedBasket);
+        }
+        // Sepet içeriğini güncelleyen fonksiyon
+        function updateBasket() {
+            let basketGame = basketItems.map(element => {
+                return `
+              <div class="basket-game m-auto mt-3 p-2 row">
+                <div class="basket-left col-xxl-4 col-xl-4">
                 </div>
                 <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
-                    <h3>${element.standart.name}</h3>
-                    <h4>${element.standart.edition}</h4>
-                    <h4>${element.standart.price}</h4>
-                    <button class="btn btn-danger remove-button">Remove Basket</button>
+                  <h3>${element.standart.name}</h3>
+                  <h4>${element.standart.edition}</h4>
+                  <h4>${element.standart.price}</h4>
+                  <button class="btn btn-danger remove-button">Remove Basket</button>
                 </div>
-            </div>
-                `;
+              </div>`;
             }).join("");
-            document.querySelector(".basket-content").innerHTML = basketPs5Game;
-            let removePs5Game = document.querySelectorAll(".remove-button");
-            removePs5Game.forEach((button, index) => {
+            document.querySelector(".basket-content").innerHTML = basketGame;
+
+            // Remove butonlarına dinleyici ekleme
+            let removeGame = document.querySelectorAll(".remove-button");
+            removeGame.forEach((button, index) => {
                 button.addEventListener("click", () => {
-                    basketPs5Items.splice(index, 1);
-                    updatePs5Basket();
+                    basketItems.splice(index, 1); // Ürünü sepet listesinden kaldırma
+                    updateBasket(); // Sepet içeriğini güncelleme
+                    saveBasket();
                 });
             });
         }
+        let basketPs5 = data.filter(element => element.title == "PS5");
 
-        onlyPs5.forEach(element => {
-            let addPs5 = document.getElementById(element.id);
-            addPs5.addEventListener("click", (e) => {
-                let addPs5Game = onlyPs5.find(element => element.id == e.target.id);
-                basketPs5Items.push(addPs5Game);
-                updatePs5Basket();
-            })
+        basketPs5.forEach(element => {
+            let add = document.getElementById(element.id);
+            add.addEventListener("click", (e) => {
+                let addGame = basketPs5.find(item => item.id == e.target.id); // Tekil ürünü bulma
+                basketItems.push(addGame); // Ürünü sepet listesine ekleme
+                // Sepet içeriğini güncelleyen fonksiyonu çağırma
+                updateBasket();
+
+                // Sepet içeriğini local storage'a kaydet
+                saveBasket();
+            });
         });
 
     });
@@ -223,40 +245,58 @@ fetch("/games.json")
             document.querySelector("#xbox").innerHTML = filteredXboxGame;
         });
 
-        //! XBOX BASKET => Add Game
-        let basketXboxItems = [];
+        //! XBOX BASKET
+        let basketItems = []; // Sepetteki ürünleri tutan liste
 
-        function updateXboxBasket() {
-            let basketXboxGame = basketXboxItems.map(element => {
-                return `<div class="basket-game m-auto mt-3 p-2 row">
-                <div class="basket-left col-xxl-4 col-xl-4 ">
+        // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
+        let savedBasket = localStorage.getItem("Saved Basket");
+        basketItems = JSON.parse(savedBasket);
+        updateBasket();
+
+        function saveBasket() {
+            let savedBasket = JSON.stringify(basketItems);
+            localStorage.setItem("Saved Basket", savedBasket);
+        }
+        // Sepet içeriğini güncelleyen fonksiyon
+        function updateBasket() {
+            let basketGame = basketItems.map(element => {
+                return `
+              <div class="basket-game m-auto mt-3 p-2 row">
+                <div class="basket-left col-xxl-4 col-xl-4">
                 </div>
                 <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
-                    <h3>${element.standart.name}</h3>
-                    <h4>${element.standart.edition}</h4>
-                    <h4>${element.standart.price}</h4>
-                    <button class="btn btn-danger remove-button">Remove Basket</button>
+                  <h3>${element.standart.name}</h3>
+                  <h4>${element.standart.edition}</h4>
+                  <h4>${element.standart.price}</h4>
+                  <button class="btn btn-danger remove-button">Remove Basket</button>
                 </div>
-            </div>
-                `;
+              </div>`;
             }).join("");
-            document.querySelector(".basket-content").innerHTML = basketXboxGame;
-            let removeXboxGame = document.querySelectorAll(".remove-button");
-            removeXboxGame.forEach((button, index) => {
+            document.querySelector(".basket-content").innerHTML = basketGame;
+
+            // Remove butonlarına dinleyici ekleme
+            let removeGame = document.querySelectorAll(".remove-button");
+            removeGame.forEach((button, index) => {
                 button.addEventListener("click", () => {
-                    basketXboxItems.splice(index, 1);
-                    updateXboxBasket();
+                    basketItems.splice(index, 1); // Ürünü sepet listesinden kaldırma
+                    updateBasket(); // Sepet içeriğini güncelleme
+                    saveBasket();
                 });
             });
         }
+        let basketXbox = data.filter(element => element.title == "XBOX");
 
-        onlyXbox.forEach(element => {
-            let addXbox = document.getElementById(element.id);
-            addXbox.addEventListener("click", (e) => {
-                let addXboxGame = onlyXbox.find(element => element.id == e.target.id);
-                basketXboxItems.push(addXboxGame);
-                updateXboxBasket();
-            })
+        basketXbox.forEach(element => {
+            let add = document.getElementById(element.id);
+            add.addEventListener("click", (e) => {
+                let addGame = basketXbox.find(item => item.id == e.target.id); // Tekil ürünü bulma
+                basketItems.push(addGame); // Ürünü sepet listesine ekleme
+                // Sepet içeriğini güncelleyen fonksiyonu çağırma
+                updateBasket();
+
+                // Sepet içeriğini local storage'a kaydet
+                saveBasket();
+            });
         });
 
     });
