@@ -46,22 +46,28 @@ fetch("/games.json")
         //! PC BASKET => Add Game
         let basketPcItems = []; // Sepetteki ürünleri tutan liste
 
+        // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
+        let savedBasket = localStorage.getItem("Saved Basket");
+        basketPcItems=JSON.parse(savedBasket);
+        updatePcBasket();
+
         // Sepet içeriğini güncelleyen fonksiyon
         function updatePcBasket() {
             let basketPcGame = basketPcItems.map(element => {
                 return `
-                <div class="basket-game m-auto mt-3 p-2 row">
-                    <div class="basket-left col-xxl-4 col-xl-4 ">
-                    </div>
-                    <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
-                        <h3>${element.standart.name}</h3>
-                        <h4>${element.standart.edition}</h4>
-                        <h4>${element.standart.price}</h4>
-                        <button class="btn btn-danger remove-button">Remove Basket</button>
-                    </div>
-                </div>`;
+      <div class="basket-game m-auto mt-3 p-2 row">
+        <div class="basket-left col-xxl-4 col-xl-4">
+        </div>
+        <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
+          <h3>${element.standart.name}</h3>
+          <h4>${element.standart.edition}</h4>
+          <h4>${element.standart.price}</h4>
+          <button class="btn btn-danger remove-button">Remove Basket</button>
+        </div>
+      </div>`;
             }).join("");
             document.querySelector(".basket-content").innerHTML = basketPcGame;
+
             // Remove butonlarına dinleyici ekleme
             let removePcGame = document.querySelectorAll(".remove-button");
             removePcGame.forEach((button, index) => {
@@ -79,8 +85,13 @@ fetch("/games.json")
                 basketPcItems.push(addPcGame); // Ürünü sepet listesine ekleme
                 // Sepet içeriğini güncelleyen fonksiyonu çağırma
                 updatePcBasket();
+
+                // Sepet içeriğini local storage'a kaydet
+                let savedBasket = JSON.stringify(basketPcItems);
+                localStorage.setItem("Saved Basket", savedBasket);
             });
         });
+
 
     });
 
@@ -147,10 +158,10 @@ fetch("/games.json")
                 `;
             }).join("");
             document.querySelector(".basket-content").innerHTML = basketPs5Game;
-            let removePs5Game=document.querySelectorAll(".remove-button");
-            removePs5Game.forEach((button,index) => {
-                button.addEventListener("click",()=>{
-                    basketPs5Items.splice(index,1);
+            let removePs5Game = document.querySelectorAll(".remove-button");
+            removePs5Game.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    basketPs5Items.splice(index, 1);
                     updatePs5Basket();
                 });
             });
@@ -230,10 +241,10 @@ fetch("/games.json")
                 `;
             }).join("");
             document.querySelector(".basket-content").innerHTML = basketXboxGame;
-            let removeXboxGame=document.querySelectorAll(".remove-button");
-            removeXboxGame.forEach((button,index) => {
-                button.addEventListener("click",()=>{
-                    basketXboxItems.splice(index,1);
+            let removeXboxGame = document.querySelectorAll(".remove-button");
+            removeXboxGame.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    basketXboxItems.splice(index, 1);
                     updateXboxBasket();
                 });
             });
