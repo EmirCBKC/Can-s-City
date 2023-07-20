@@ -711,24 +711,26 @@ user.addEventListener("click", () => {
 fetch("/users.json")
     .then(res => res.json())
     .then(data => {
-        let form = document.querySelector("#user-form");
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            let username = document.querySelector("#username");
-            let password = document.querySelector("#password");
-            let usernameValue = username.value.trim();
-            let passwordValue = password.value.trim();
+        let login = document.querySelector("#login");
+        let form = document.querySelector(".form");
+        login.addEventListener("click", (e) => {
+            let username = document.querySelector("#username").value;
+            let password = document.querySelector("#password").value;
             let filterUsername = data.filter(element => {
-                return element.username.includes(usernameValue);
+                return element.username.includes(username);
             });
             let filterPassword = data.filter(element => {
-                return element.password.includes(passwordValue);
+                return element.password.includes(password);
             });
             if (filterUsername.length == 1 && filterPassword.length == 1) {
-                window.location.href="profile.html"
-                form.style.cssText="display: none!important;";
+                form.style.backgroundColor = "pink";
+                localStorage.setItem("cssSettings", "blue");
             } else {
                 alert("Kullanıcı adı veya şifre yanlış");
             }
         });
+        let savedBackgroundColor = localStorage.getItem("cssSettings");
+        if (savedBackgroundColor) {
+            form.style.backgroundColor = savedBackgroundColor;
+        }
     });

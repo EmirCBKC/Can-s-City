@@ -167,7 +167,7 @@ form{
 .username input,.password input{
     background-color: #000f1e;
     border-color: #00ffff;
-    height: 80%;
+    height: 90%;
     color: #00ffff;
     border-radius: 5px;
 }
@@ -178,14 +178,16 @@ form{
     font-size: 18px;
     color: #00aeae;
 }
-form button{
+.user-login-content button{
     background-color: #000000!important;
     border-color: #00ffff!important;
     color: #00ffff!important;
     width: 40%;
     font-size: 20px!important;
 }
-
+.form{
+    width: 70%;
+}
 
 /******************************************* NAVBAR-CSS-END ***********************************************/
 
