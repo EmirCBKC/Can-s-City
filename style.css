@@ -140,6 +140,53 @@ li a:hover {
     font-size: 23px;
 }
 
+.user-login-content{
+    display: none;
+    width: 35rem;
+    height: 0rem;
+    opacity: 0;
+    background-color: black;
+    border: 2px solid #00ffff;
+    border-radius: 0px 0px 30px 30px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
+    animation: UserOpenAni 5s forwards;
+}
+form{
+    width: 70%;
+}
+.username,.password,.remember{
+    width: 100%;
+}
+.username label,.password label{
+    font-size: 35px;
+    color: #00ffff;
+}
+.username input,.password input{
+    background-color: #000f1e;
+    border-color: #00ffff;
+    height: 80%;
+    color: #00ffff;
+    border-radius: 5px;
+}
+.username input::placeholder,.password input::placeholder{
+    color: #007171!important;
+}
+.remember label{
+    font-size: 18px;
+    color: #00aeae;
+}
+form button{
+    background-color: #000000!important;
+    border-color: #00ffff!important;
+    color: #00ffff!important;
+    width: 40%;
+    font-size: 20px!important;
+}
+
+
 /******************************************* NAVBAR-CSS-END ***********************************************/
 
 /******************************************* HOME-CSS-START ************************************************/
@@ -724,6 +771,20 @@ footer h2 {
 
     100% {
         height: 35rem;
+    }
+}
+@keyframes UserOpenAni {
+    0%{
+        height: 0rem;
+        opacity: 0;
+    }
+    50%{
+        height: 17rem;
+        opacity: 1;
+    }
+    100%{
+        height: 17rem;
+        opacity: 1;
     }
 }
 
