@@ -725,7 +725,8 @@ fetch("/users.json")
                 return element.password.includes(passwordValue);
             });
             if (filterUsername.length == 1 && filterPassword.length == 1) {
-                alert("Giriş Yapıldı");
+                window.location.href="profile.html"
+                form.style.cssText="display: none!important;";
             } else {
                 alert("Kullanıcı adı veya şifre yanlış");
             }
