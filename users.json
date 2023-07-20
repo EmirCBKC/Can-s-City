@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "username":"EmirCBKC",
+        "password":"emir36",
+        "name":"Emircan",
+        "surname":"ÇUBUKCU",
+        "age":25
+    },
+    {
+        "id":2,
+        "username":"Yildirim1903",
+        "password":"demir03",
+        "name":"Yıldırım",
+        "surname":"DEMİR",
+        "age":18
+    }
+]

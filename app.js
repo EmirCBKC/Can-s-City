@@ -685,13 +685,13 @@ fetch("/games.json")
 let basket = document.querySelector("#basket");
 let basketContent = document.querySelector(".basket-content");
 basketContent.style.display = "none";
-let user=document.querySelector("#user");
-let userContent=document.querySelector(".user-content");
-userContent.style.display="none";
+let user = document.querySelector("#user");
+let userContent = document.querySelector(".user-content");
+userContent.style.display = "none";
 basket.addEventListener("click", () => {
     if (basketContent.style.display == "none") {
         basketContent.style.display = "block";
-        userContent.style.display="none";
+        userContent.style.display = "none";
     }
     else if (basketContent.style.display = "block") {
         basketContent.style.display = "none";
@@ -700,9 +700,34 @@ basket.addEventListener("click", () => {
 user.addEventListener("click", () => {
     if (userContent.style.display == "none") {
         userContent.style.display = "block";
-        basketContent.style.display="none";
+        basketContent.style.display = "none";
     }
     else if (userContent.style.display = "block") {
         userContent.style.display = "none";
     }
 });
+
+//! USER LOGIN
+fetch("/users.json")
+    .then(res => res.json())
+    .then(data => {
+        let form = document.querySelector("#user-form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let username = document.querySelector("#username");
+            let password = document.querySelector("#password");
+            let usernameValue = username.value.trim();
+            let passwordValue = password.value.trim();
+            let filterUsername = data.filter(element => {
+                return element.username.includes(usernameValue);
+            });
+            let filterPassword = data.filter(element => {
+                return element.password.includes(passwordValue);
+            });
+            if (filterUsername.length == 1 && filterPassword.length == 1) {
+                alert("Giriş Yapıldı");
+            } else {
+                alert("Kullanıcı adı veya şifre yanlış");
+            }
+        });
+    });
