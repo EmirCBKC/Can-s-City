@@ -128,12 +128,13 @@ fetch("/games.json")
             });
         }
         let basketPc = data.filter(element => element.title == "PC");
-
+        let basketContent = document.querySelector(".basket-content");
         basketPc.forEach(element => {
             let add = document.getElementById(element.id);
             add.addEventListener("click", (e) => {
                 let addGame = basketPc.find(item => item.id == e.target.id); // Tekil ürünü bulma
                 basketItems.push(addGame); // Ürünü sepet listesine ekleme
+                basketContent.style.display = "block";
                 // Sepet içeriğini güncelleyen fonksiyonu çağırma
                 updateBasket();
 
@@ -274,12 +275,13 @@ fetch("/games.json")
             });
         }
         let basketPs5 = data.filter(element => element.title == "PS5");
-
+        let basketContent = document.querySelector(".basket-content");
         basketPs5.forEach(element => {
             let add = document.getElementById(element.id);
             add.addEventListener("click", (e) => {
                 let addGame = basketPs5.find(item => item.id == e.target.id); // Tekil ürünü bulma
                 basketItems.push(addGame); // Ürünü sepet listesine ekleme
+                basketContent.style.display = "block";
                 // Sepet içeriğini güncelleyen fonksiyonu çağırma
                 updateBasket();
 
@@ -420,12 +422,13 @@ fetch("/games.json")
             });
         }
         let basketXbox = data.filter(element => element.title == "XBOX");
-
+        let basketContent = document.querySelector(".basket-content");
         basketXbox.forEach(element => {
             let add = document.getElementById(element.id);
             add.addEventListener("click", (e) => {
                 let addGame = basketXbox.find(item => item.id == e.target.id); // Tekil ürünü bulma
                 basketItems.push(addGame); // Ürünü sepet listesine ekleme
+                basketContent.style.display = "block";
                 // Sepet içeriğini güncelleyen fonksiyonu çağırma
                 updateBasket();
 
@@ -602,7 +605,7 @@ fetch("/games.json")
         }).join("");
         document.querySelector("#detail").innerHTML = goDetail;
 
-        //! DETAIL BASKET
+        //! DETAIL BASKET => Standart-Deluxe-Collector
         let basketItems = []; // Sepetteki ürünleri tutan liste
 
         // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
@@ -648,12 +651,13 @@ fetch("/games.json")
                 });
             });
         }
-
+        let basketContent = document.querySelector(".basket-content");
         addStandart.addEventListener("click", (e) => {
             console.log(e.target.value);
             let addStandart = data.find(item => item.standart.edition == e.target.id && item.standart.name == e.target.value); // Tekil ürünü bulma
             console.log(addStandart);
             basketItems.push(addStandart); // Ürünü sepet listesine ekleme
+            basketContent.style.display = "block";
             // Sepet içeriğini güncelleyen fonksiyonu çağırma
             updateBasket(e);
             // Sepet içeriğini local storage'a kaydet
@@ -664,6 +668,7 @@ fetch("/games.json")
             let addDeluxe = data.find(item => item.deluxe.edition == e.target.id && item.deluxe.name == e.target.value); // Tekil ürünü bulma
             console.log(addDeluxe);
             basketItems.push(addDeluxe); // Ürünü sepet listesine ekleme
+            basketContent.style.display = "block";
             // Sepet içeriğini güncelleyen fonksiyonu çağırma
             updateBasket(e);
             // Sepet içeriğini local storage'a kaydet
@@ -674,6 +679,7 @@ fetch("/games.json")
             let addUltimate = data.find(item => item.ultimate.edition == e.target.id && item.ultimate.name == e.target.value); // Tekil ürünü bulma
             console.log(addUltimate);
             basketItems.push(addUltimate); // Ürünü sepet listesine ekleme
+            basketContent.style.display = "block";
             // Sepet içeriğini güncelleyen fonksiyonu çağırma
             updateBasket(e);
             // Sepet içeriğini local storage'a kaydet
