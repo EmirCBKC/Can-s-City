@@ -110,7 +110,7 @@ fetch("/games.json")
             <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
               <h3>${element.edition.game_name}</h3>
               <h4>${element.edition.edition_name}</h4>
-              <h4>${element.edition.price}</h4>
+              <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
           </div>`;
@@ -257,7 +257,7 @@ fetch("/games.json")
             <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
               <h3>${element.edition.game_name}</h3>
               <h4>${element.edition.edition_name}</h4>
-              <h4>${element.edition.price}</h4>
+              <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
           </div>`;
@@ -404,7 +404,7 @@ fetch("/games.json")
             <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
               <h3>${element.edition.game_name}</h3>
               <h4>${element.edition.edition_name}</h4>
-              <h4>${element.edition.price}</h4>
+              <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
           </div>`;
@@ -651,7 +651,7 @@ fetch("/games.json")
             <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
               <h3>${element.edition.game_name}</h3>
               <h4>${element.edition.edition_name}</h4>
-              <h4>${element.edition.price}</h4>
+              <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
           </div>`;
@@ -669,7 +669,7 @@ fetch("/games.json")
             });
         }
         let basketContent = document.querySelector(".basket-content");
-        let mix=detailGame.concat(detailDeluxeIdNew).concat(detailUltimateIdNew);
+        let mix = detailGame.concat(detailDeluxeIdNew).concat(detailUltimateIdNew);
         mix.forEach(element => {
             let add = document.getElementById(element.id);
             add.addEventListener("click", (e) => {
@@ -717,6 +717,9 @@ user.addEventListener("click", () => {
 fetch("/users.json")
     .then(res => res.json())
     .then(data => {
+        let cloudUser = localStorage.getItem("Saved Users");
+        let localUser = JSON.parse(cloudUser);
+        let userContent = document.querySelector(".user-content");
         let login = document.querySelector("#login");
         let form = document.querySelector(".form");
         login.addEventListener("click", (e) => {
@@ -729,14 +732,34 @@ fetch("/users.json")
                 return element.password.includes(password);
             });
             if (filterUsername.length == 1 && filterPassword.length == 1) {
-                form.style.backgroundColor = "pink";
-                localStorage.setItem("cssSettings", "blue");
+                window.location.href = "profile.html";
+                let getUser = data.filter(element => element.username == username && element.password == password);
+                form.style.display="none";
+                userContent.style.display="none";
+                localStorage.setItem("Display None Form","none");
+                let users = JSON.stringify(getUser);
+                localStorage.setItem("Saved Users", users);
             } else {
                 alert("Kullanıcı adı veya şifre yanlış");
             }
         });
-        let savedBackgroundColor = localStorage.getItem("cssSettings");
-        if (savedBackgroundColor) {
-            form.style.backgroundColor = savedBackgroundColor;
-        }
+        
+        let getProfileUser = localUser.map(element => {
+            return `
+            <h1>${element.username}</h1>
+            <h1>${element.name}</h1>
+            <h1>${element.surname}</h1>
+            <h1>${element.age}</h1>
+            `;
+        }).join("");
+        document.querySelector(".profile-content").innerHTML = getProfileUser;
+        let getDisplayNoneForm=localStorage.getItem("Display None Form");
+        form.style.display=getDisplayNoneForm;
     });
+    let form = document.querySelector(".form");
+    if (form.style.display="block") {
+        form.style.display="block"
+    } else {
+        let getDisplayNoneForm=localStorage.getItem("Display None Form");
+        form.style.display=getDisplayNoneForm;
+    }
