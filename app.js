@@ -113,7 +113,9 @@ fetch("/games.json")
               <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
-          </div>`;
+          </div>
+          <div class="order-button"><a href="/complete-order.html" class="btn order btn-success mt-2">Complete Order</a></div>
+          `;
             }).join("");
             document.querySelector(".basket-content").innerHTML = basketGame;
 
@@ -137,7 +139,6 @@ fetch("/games.json")
                 basketContent.style.display = "block";
                 // Sepet içeriğini güncelleyen fonksiyonu çağırma
                 updateBasket();
-
                 // Sepet içeriğini local storage'a kaydet
                 saveBasket();
             });
@@ -260,7 +261,9 @@ fetch("/games.json")
               <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
-          </div>`;
+          </div>
+          <div class="order-button"><a href="/complete-order.html" class="btn order btn-success mt-2">Complete Order</a></div>
+          `;
             }).join("");
             document.querySelector(".basket-content").innerHTML = basketGame;
 
@@ -407,7 +410,9 @@ fetch("/games.json")
               <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
-          </div>`;
+          </div>
+          <div class="order-button"><a href="/complete-order.html" class="btn order btn-success mt-2">Complete Order</a></div>
+          `;
             }).join("");
             document.querySelector(".basket-content").innerHTML = basketGame;
 
@@ -654,7 +659,9 @@ fetch("/games.json")
               <h4>${element.edition.price}$</h4>
               <button class="btn btn-danger remove-button">Remove Basket</button>
             </div>
-          </div>`;
+          </div>
+          <div class="order-button"><a href="/complete-order.html" class="btn order btn-success mt-2">Complete Order</a></div>
+          `;
             }).join("");
             document.querySelector(".basket-content").innerHTML = basketGame;
 
@@ -713,7 +720,7 @@ user.addEventListener("click", () => {
     }
 });
 
-//! USER LOGIN
+//! USER LOGIN => Profile Page
 fetch("/users.json")
     .then(res => res.json())
     .then(data => {
@@ -722,6 +729,7 @@ fetch("/users.json")
         let userContent = document.querySelector(".user-content");
         let login = document.querySelector("#login");
         let form = document.querySelector(".form");
+        let profile = document.querySelector(".profile");
         login.addEventListener("click", (e) => {
             let username = document.querySelector("#username").value;
             let password = document.querySelector("#password").value;
@@ -734,16 +742,15 @@ fetch("/users.json")
             if (filterUsername.length == 1 && filterPassword.length == 1) {
                 window.location.href = "profile.html";
                 let getUser = data.filter(element => element.username == username && element.password == password);
-                form.style.display="none";
-                userContent.style.display="none";
-                localStorage.setItem("Display None Form","none");
+                form.style.display = "none";
+                userContent.style.display = "none";
+                localStorage.setItem("Display None Form", "none");
                 let users = JSON.stringify(getUser);
                 localStorage.setItem("Saved Users", users);
             } else {
                 alert("Kullanıcı adı veya şifre yanlış");
             }
         });
-        
         let getProfileUser = localUser.map(element => {
             return `
             <h1>${element.username}</h1>
@@ -753,13 +760,43 @@ fetch("/users.json")
             `;
         }).join("");
         document.querySelector(".profile-content").innerHTML = getProfileUser;
-        let getDisplayNoneForm=localStorage.getItem("Display None Form");
-        form.style.display=getDisplayNoneForm;
+        let getDisplayNoneForm = localStorage.getItem("Display None Form");
+        form.style.display = getDisplayNoneForm;
     });
-    let form = document.querySelector(".form");
-    if (form.style.display="block") {
-        form.style.display="block"
-    } else {
-        let getDisplayNoneForm=localStorage.getItem("Display None Form");
-        form.style.display=getDisplayNoneForm;
-    }
+
+
+let savedBasket = localStorage.getItem("Saved Basket");
+let comeBasket = JSON.parse(savedBasket);
+console.log(comeBasket);
+let orderPage = comeBasket.map(element => {
+    return `<div class="order-row row mt-5 mb-5 p-5">
+            <div class="col-2">
+                <div class="order-image" style="background-image: url(${element.edition.img});
+                width: 100%;
+                height: 15rem;
+                background-size:cover;
+                background-position:top;
+                border-radius:15px;
+                border:2px solid black;">
+
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="order-name d-flex justify-content-center align-items-center">
+                    <h1>${element.edition.game_name}</h1>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="order-edition d-flex justify-content-center align-items-center">
+                    <h1>${element.edition.edition_name}</h1>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="order-price d-flex justify-content-center align-items-center">
+                    <h1>${element.edition.price}</h1>
+                </div>
+            </div>
+        </div>
+            `;
+}).join("");
+document.querySelector(".complete-order-content").innerHTML = orderPage;

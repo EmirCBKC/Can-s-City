@@ -12,7 +12,7 @@ body {
 /******************************************* NAVBAR-CSS-START ***********************************************/
 
 .home-background {
-    background-image: linear-gradient(to top, #000000 10%, #000000d3 37%, #fbcd00 49%, #600d00 60%, #000000 90%);
+    background-image: linear-gradient(to top, #000000 10%, #343434d3 34%, #4b452c 37%, #fbcd00 49%, #600d00 60%, #000000 90%);
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
@@ -26,9 +26,12 @@ body {
 }
 
 nav {
-    background: linear-gradient(0deg, rgba(0, 255, 255, 1) 0%, rgba(0, 0, 0, 0.834) 15%);
     width: 100%;
-    background-color: black;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+    border-bottom: 5px solid #00ffff;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .navbar-toggler-icon {
@@ -102,6 +105,10 @@ li a:hover {
     animation: NavClick 2s infinite;
 }
 
+.profile {
+    display: none;
+}
+
 .basket-content {
     display: none;
     width: 35rem;
@@ -140,7 +147,21 @@ li a:hover {
     font-size: 23px;
 }
 
-.user-login-content{
+.order-button {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.order-button a {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.user-login-content {
     display: none;
     width: 35rem;
     height: 0rem;
@@ -154,38 +175,51 @@ li a:hover {
     z-index: 999;
     animation: UserOpenAni 5s forwards;
 }
-form{
+
+form {
     width: 70%;
 }
-.username,.password,.remember{
+
+.username,
+.password,
+.remember {
     width: 100%;
 }
-.username label,.password label{
+
+.username label,
+.password label {
     font-size: 35px;
     color: #00ffff;
 }
-.username input,.password input{
+
+.username input,
+.password input {
     background-color: #000f1e;
     border-color: #00ffff;
     height: 90%;
     color: #00ffff;
     border-radius: 5px;
 }
-.username input::placeholder,.password input::placeholder{
-    color: #007171!important;
+
+.username input::placeholder,
+.password input::placeholder {
+    color: #007171 !important;
 }
-.remember label{
+
+.remember label {
     font-size: 18px;
     color: #00aeae;
 }
-.user-login-content button{
-    background-color: #000000!important;
-    border-color: #00ffff!important;
-    color: #00ffff!important;
+
+.user-login-content button {
+    background-color: #000000 !important;
+    border-color: #00ffff !important;
+    color: #00ffff !important;
     width: 40%;
-    font-size: 20px!important;
+    font-size: 20px !important;
 }
-.form{
+
+.form {
     width: 70%;
 }
 
@@ -306,7 +340,7 @@ form{
 }
 
 .accordion-button {
-    background-color: black !important;
+    background-image: linear-gradient(43deg, #010712 0%, #04132fe4 66%, #305aa896 100%) !important;
     color: #00ffff !important;
     font-size: 25px !important;
 }
@@ -332,7 +366,7 @@ form{
     height: 10rem;
 }
 
-.pc-filter button{
+.pc-filter button {
     background-color: #b56600;
     border-radius: 30px;
     width: 25%;
@@ -342,7 +376,8 @@ form{
     color: white;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.pc-filter button:hover{
+
+.pc-filter button:hover {
     background-color: rgb(255, 204, 0);
     color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -418,7 +453,8 @@ form{
     width: 60%;
     height: 10rem;
 }
-.ps5-filter button{
+
+.ps5-filter button {
     background-color: rgb(18, 18, 18);
     border-radius: 30px;
     width: 25%;
@@ -428,7 +464,8 @@ form{
     color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.ps5-filter button:hover{
+
+.ps5-filter button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -504,7 +541,8 @@ form{
     width: 60%;
     height: 10rem;
 }
-.xbox-filter button{
+
+.xbox-filter button {
     background-color: rgb(18, 18, 18);
     border-radius: 30px;
     width: 25%;
@@ -514,6 +552,7 @@ form{
     color: #1ac12e;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
 .xbox-filter button:hover {
     background-color: #1ac12e;
     color: black;
@@ -720,13 +759,47 @@ iframe {
 
 /******************************************* PROFILE-CSS-START ************************************************/
 
-.profile-background{
+.profile-background {
     background-color: orange;
     width: 100%;
     height: 70vh;
 }
 
 /******************************************* PROFILE-CSS-END ************************************************/
+
+/******************************************* COMPLETE-ORDER-CSS-START ************************************************/
+
+.complete-order-content {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(108.9deg, #dadada 20%, rgb(89, 202, 255) 97%);
+}
+
+.order-row {
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.order-name {
+    background-color: transparent;
+    width: 100%;
+    height: 15rem;
+}
+
+.order-edition {
+    background-color: transparent;
+    width: 100%;
+    height: 15rem;
+}
+
+.order-price {
+    background-color: transparent;
+    width: 100%;
+    height: 15rem;
+}
+
+/******************************************* COMPLETE-ORDER-CSS-START ************************************************/
 
 /******************************************* FOOTER-CSS-START ***********************************************/
 footer {
@@ -735,7 +808,8 @@ footer {
     bottom: 0;
     width: 100%;
     height: auto;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.834) 96%, rgba(0, 255, 255, 1) 100%);
+    background-image: linear-gradient(43deg, #010712 0%, #04132fe4 46%, #305aa896 100%);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     animation: FooterAni 3s infinite;
 }
 
@@ -762,16 +836,19 @@ footer h2 {
 
 /******************************************* Animation-Start ****************************************************/
 @keyframes BasketGameAni {
-    0%{
+    0% {
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
+
 @keyframes BasketOpenAni {
     0% {
         height: 0rem;
@@ -785,16 +862,19 @@ footer h2 {
         height: 35rem;
     }
 }
+
 @keyframes UserOpenAni {
-    0%{
+    0% {
         height: 0rem;
         opacity: 0;
     }
-    50%{
+
+    50% {
         height: 17rem;
         opacity: 1;
     }
-    100%{
+
+    100% {
         height: 17rem;
         opacity: 1;
     }
