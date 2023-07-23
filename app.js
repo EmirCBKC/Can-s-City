@@ -11,7 +11,7 @@ fetch("/games.json")
                 <h1 class="text-center mt-2">${element.edition.game_name}</h1>
                 <h2 class="text-center price mt-2">${element.edition.price}$</h2>
                 <a href="/detail.html?id=${element.id}" class="btn btn-light mt-2">Go detail</a>
-                <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
+                <button id="${element.id}" class="add-basket mt-2">Add Basket</button>
             </div>
         </div>
     </div>
@@ -159,7 +159,7 @@ fetch("/games.json")
                 <h1 class="text-center mt-2">${element.edition.game_name}</h1>
                 <h2 class="text-center price mt-2">${element.edition.price}$</h2>
                 <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
-                <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
+                <button id="${element.id}" class="add-basket mt-2">Add Basket</button>
             </div>
         </div>
     </div>
@@ -308,7 +308,7 @@ fetch("/games.json")
                 <h1 class="text-center mt-2">${element.edition.game_name}</h1>
                 <h2 class="text-center price mt-2">${element.edition.price}$</h2>
                 <a href="/detail.html?id=${element.id}" class="btn btn-light">Go detail</a>
-                <button id="${element.id}" class="btn btn-danger mt-2">Add Basket</button>
+                <button id="${element.id}" class="add-basket mt-2">Add Basket</button>
             </div>
         </div>
     </div>
@@ -455,44 +455,48 @@ fetch("/games.json")
             return `
             <div class="detail-background d-flex justify-content-center flex-column align-items-center" 
         style="background:linear-gradient(to top,rgba(0, 0, 0, 0.62) 25%,rgba(0, 0, 0, 0.277) 90%),url(${element.background_image});
-            background-position:100%;
+            background-position:center;
             background-size:cover;
             width: 100%;
             height: auto;
             background-repeat: no-repeat;">
 
             <div class="detail-content mt-5 p-3">
-
-                <h1 class="text-center brand mt-5">${element.edition.game_name}</h1>
+                <div class="brand d-flex flex-column align-items-center"><h1 class="text-center p-3 mt-5">${element.edition.game_name}</h1></div>
                 <div class="detail-top-row mt-5 mb-5 row justify-content-center">
-                    <div class="mt-3 mb-3 col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="left-col mt-3 mb-3 col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="left-detail d-flex justify-content-center" style="width: 100%;
                         height: 45rem;
-                        background-color: rgba(0, 0, 0, 0.39);
-                        background-image: url(${element.left_png});
+                        background-color: #4158D0;
+                        background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
                         background-position: center;
                         background-size: cover;
-                        border-radius: 40px;">
+                        border-radius: 40px;
+                        border: 2px solid #00ffff;">
+                        <img src="${element.left_png}" style="filter: drop-shadow(0px 0px 50px ${element.png_shadow_color});">
                         </div>
                     </div>
                     <div class="mt-3 mb-3 col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="video-detail d-flex justify-content-center" style="width: 100%;
                         height: 45rem;
                         background-color: rgba(0, 0, 0, 0.326);
-                        border-radius: 40px;">
+                        border-radius: 40px;
+                        border: 2px solid #00ffff;">
                             <iframe width="100%" height="100%" src="${element.iframe}" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="mt-3 mb-3 col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="right-col mt-3 mb-3 col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="right-detail d-flex justify-content-center" style="width: 100%;
                         height: 45rem;
-                        background-color: rgba(0, 0, 0, 0.353);
-                        background-image: url(${element.right_png});
+                        background-color: #4158D0;
+                        background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
                         background-position: center;
                         background-size: cover;
-                        border-radius: 40px;">
+                        border-radius: 40px;
+                        border: 2px solid #00ffff;">
+                        <img src="${element.right_png}" style="filter: drop-shadow(0px 0px 50px ${element.png_shadow_color});">
                         </div>
                     </div>
                 </div>
@@ -519,7 +523,7 @@ fetch("/games.json")
                                             minima porro tempore.</li>
                                     </ul>
                                     <h2 class="text-center price mt-2">${element.edition.price}$</h2>
-                                    <button id="${element.id}" class="btn btn-danger mt-2" value="${element.edition.game_name}">Add Basket</button>
+                                    <button id="${element.id}" class="add-basket mt-2" value="${element.edition.game_name}">Add Basket</button>
                                 </div>
                             </div>
                         </div>
@@ -542,6 +546,7 @@ fetch("/games.json")
                         height: 40rem;
                         background-color: rgba(46, 0, 86, 0.332);
                         border-radius: 40px;
+                        border: 2px solid #00ffff;
                         background-image: url(${element.image});
                         background-position: center;
                         background-size: cover;
@@ -549,7 +554,7 @@ fetch("/games.json")
                         </div>
                     </div>
                     <div class="mt-3 mb-3 col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="about-detail">
+                        <div class="about-detail" style="border: 2px solid #00ffff;">
                             <p class="text-center p-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
                                 consequuntur ipsam in soluta deserunt quis doloribus voluptates ullam non fugiat!
                                 Voluptatibus, similique! Soluta ducimus, iste saepe atque dolores dolorem praesentium?
@@ -592,7 +597,7 @@ fetch("/games.json")
                             minima porro tempore.</li>
                     </ul>
                     <h2 class="text-center price mt-2">${element.edition.price}$</h2>
-                    <button id="${element.id}" class="btn btn-danger mt-2" value="${element.edition.game_name}">Add Basket</button>
+                    <button id="${element.id}" class="add-basket mt-2" value="${element.edition.game_name}">Add Basket</button>
                 </div>
             </div>
             `;
@@ -623,7 +628,7 @@ fetch("/games.json")
                             minima porro tempore.</li>
                     </ul>
                     <h2 class="text-center price mt-2">${element.edition.price}$</h2>
-                    <button id="${element.id}" class="btn btn-danger mt-2" value="${element.edition.game_name}">Add Basket</button>
+                    <button id="${element.id}" class="add-basket mt-2" value="${element.edition.game_name}">Add Basket</button>
                 </div>
             </div>
             `;
