@@ -223,11 +223,11 @@ form {
     width: 70%;
 }
 
-.basket i:hover{
+.basket i:hover {
     animation: Logo 3s infinite;
 }
 
-.user-login i:hover{
+.user-login i:hover {
     animation: Logo 3s infinite;
 }
 
@@ -360,7 +360,8 @@ form {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     animation: PC-PS5-XBOX-HeaderAni 5s infinite;
 }
-.add-basket{
+
+.add-basket {
     background-color: rgb(15, 22, 31);
     color: #00ffff;
     border: 2px solid #00ffff;
@@ -369,7 +370,8 @@ form {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.add-basket:hover{
+
+.add-basket:hover {
     background-color: rgb(118, 165, 226);
     color: black;
     border: 2px solid rgb(15, 22, 31);
@@ -683,7 +685,7 @@ form {
     width: 100%;
 }
 
-.brand h1{
+.brand h1 {
     width: 60%;
     text-shadow: 5px 5px 5px rgb(0, 0, 0);
     font-size: 80px;
@@ -700,12 +702,12 @@ form {
     height: auto;
 }
 
-.left-detail{
+.left-detail {
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.right-detail{
+.right-detail {
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
@@ -756,7 +758,9 @@ iframe {
     color: #000516;
 }
 
-.s-game,.d-game,.u-game {
+.s-game,
+.d-game,
+.u-game {
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
     border-radius: 45px 45px 25px 25px;
@@ -842,37 +846,82 @@ iframe {
 
 /******************************************* COMPLETE-ORDER-CSS-START ************************************************/
 
+.complete-order-background {
+    background-image: linear-gradient(to top, #001231c4 20%, rgba(0, 25, 38, 0.878) 97%),url(/main-img/complete-order/background.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
 .complete-order-content {
     width: 100%;
     height: auto;
-    background-image: linear-gradient(108.9deg, #dadada 20%, rgb(89, 202, 255) 97%);
 }
 
 .order-row {
-    border: 2px solid black;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+    width: 50%;
+    border: 2px solid #00ffff;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.order-name {
+.order-info {
     background-color: transparent;
     width: 100%;
-    height: 15rem;
+    height: 10rem;
+    color: #00ffff;
 }
 
-.order-edition {
-    background-color: transparent;
+.pay {
     width: 100%;
-    height: 15rem;
+    height: auto;
 }
 
-.order-price {
-    background-color: transparent;
+.pay-row {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+    width: 50%;
+    border: 2px solid #00ffff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.discount {
     width: 100%;
-    height: 15rem;
 }
 
-/******************************************* COMPLETE-ORDER-CSS-START ************************************************/
+.discount label {
+    color: #00ffff;
+    font-size: 25px;
+}
+
+.discount input {
+    background-color: #000516;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    width: 40%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.go-pay button {
+    background-color: #000516;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.go-pay button:hover {
+    background-color: #00ffff;
+    border: 2px solid #000516;
+    color: #000516;
+}
+
+/******************************************* COMPLETE-ORDER-CSS-END ************************************************/
+
 
 /******************************************* ABOUT-CSS-START ************************************************/
 
@@ -1033,13 +1082,15 @@ footer h2 {
 /******************************************* Animation-Start ****************************************************/
 
 @keyframes Logo {
-    0%{
+    0% {
         filter: drop-shadow(0px 0px 0px #00ffff);
     }
-    50%{
+
+    50% {
         filter: drop-shadow(0px 0px 5px #00ffff);
     }
-    100%{
+
+    100% {
         filter: drop-shadow(0px 0px 0px #00ffff);
     }
 }
@@ -1131,14 +1182,16 @@ footer h2 {
     }
 }
 
-@keyframes BackgroundGameCard{
-    0%{
+@keyframes BackgroundGameCard {
+    0% {
         box-shadow: #00ffff00 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
-    50%{
+
+    50% {
         box-shadow: #00ffff2b 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
-    100%{
+
+    100% {
         box-shadow: #00ffff00 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
 }
@@ -1161,13 +1214,15 @@ footer h2 {
 }
 
 @keyframes Brand {
-    0%{
+    0% {
         background-color: #a8b6fb;
     }
-    50%{
+
+    50% {
         background-color: #101f6d;
     }
-    100%{
+
+    100% {
         background-color: #a8b6fb;
     }
 }

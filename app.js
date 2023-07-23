@@ -769,36 +769,28 @@ fetch("/users.json")
         form.style.display = getDisplayNoneForm;
     });
 
-
+//! COMPLETE ORDER PAGE
 let savedBasket = localStorage.getItem("Saved Basket");
 let comeBasket = JSON.parse(savedBasket);
 console.log(comeBasket);
 let orderPage = comeBasket.map(element => {
-    return `<div class="order-row row mt-5 mb-5 p-5">
-            <div class="col-2">
+    return `<div class="order-row justify-content-center row mt-4 mb-2 p-5">
+            <div class="col-4">
                 <div class="order-image" style="background-image: url(${element.edition.img});
                 width: 100%;
-                height: 15rem;
+                height: 10rem;
                 background-size:cover;
                 background-position:top;
                 border-radius:15px;
-                border:2px solid black;">
-
+                border:2px solid #00ffff;">
                 </div>
             </div>
-            <div class="col-5">
-                <div class="order-name d-flex justify-content-center align-items-center">
+            <div class="col-8">
+                <div class="order-info d-flex flex-column justify-content-center align-items-center">
                     <h1>${element.edition.game_name}</h1>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="order-edition d-flex justify-content-center align-items-center">
-                    <h1>${element.edition.edition_name}</h1>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="order-price d-flex justify-content-center align-items-center">
-                    <h1>${element.edition.price}</h1>
+                    <h2>${element.edition.edition_name}</h2>
+                    <h2>${element.edition.price}$</h2>
+                    <button class="btn btn-danger remove-button">Remove Basket</button>
                 </div>
             </div>
         </div>
