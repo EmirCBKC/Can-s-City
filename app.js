@@ -86,7 +86,6 @@ fetch("/games.json")
 
         //! PC BASKET
         let basketItems = []; // Sepetteki ürünleri tutan liste
-
         // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
         let savedBasket = localStorage.getItem("Saved Basket");
         basketItems = JSON.parse(savedBasket);
