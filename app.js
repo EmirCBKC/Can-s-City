@@ -734,7 +734,6 @@ fetch("/users.json")
         let userContent = document.querySelector(".user-content");
         let login = document.querySelector("#login");
         let form = document.querySelector(".form");
-        let profile = document.querySelector(".profile");
         login.addEventListener("click", (e) => {
             let username = document.querySelector("#username").value;
             let password = document.querySelector("#password").value;
@@ -757,43 +756,118 @@ fetch("/users.json")
             }
         });
         let getProfileUser = localUser.map(element => {
-            return `
-            <h1>${element.username}</h1>
-            <h1>${element.name}</h1>
-            <h1>${element.surname}</h1>
-            <h1>${element.age}</h1>
-            `;
-        }).join("");
-        document.querySelector(".profile-content").innerHTML = getProfileUser;
-        let getDisplayNoneForm = localStorage.getItem("Display None Form");
-        form.style.display = getDisplayNoneForm;
-    });
-
-//! COMPLETE ORDER PAGE
-let savedBasket = localStorage.getItem("Saved Basket");
-let comeBasket = JSON.parse(savedBasket);
-console.log(comeBasket);
-let orderPage = comeBasket.map(element => {
-    return `<div class="order-row justify-content-center row mt-4 mb-2 p-5">
-            <div class="col-4">
-                <div class="order-image" style="background-image: url(${element.edition.img});
-                width: 100%;
-                height: 10rem;
-                background-size:cover;
-                background-position:top;
-                border-radius:15px;
-                border:2px solid #00ffff;">
+            return `<div class="profile-img-row p-2 mb-5 row justify-content-center">
+            <div class="profile-img-col d-flex justify-content-center mt-4 mb-4 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="profile-img" style="background-image: url(${element.img});
+                background-position: top;
+                background-size: cover;
+                width: 73%;
+                height: 18rem;
+                background-color: #04112996;
+                border-radius: 50%;
+                border: 2px solid #00ffff;
+                box-shadow: 0px 0px 10px #00ffff;">
                 </div>
             </div>
-            <div class="col-8">
-                <div class="order-info d-flex flex-column justify-content-center align-items-center">
-                    <h1>${element.edition.game_name}</h1>
-                    <h2>${element.edition.edition_name}</h2>
-                    <h2>${element.edition.price}$</h2>
-                    <button class="btn btn-danger remove-button">Remove Basket</button>
+        </div>
+        <div class="profile-info-row mt-5 justify-content-center row">
+            <div class="profile-info-col mt-5 d-flex justify-content-center col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="profile-info mt-5">
+                    <h2>Name: ${element.name}</h2>
+                    <h2>Surname: ${element.surname}</h2>
+                    <h2>Username: ${element.username}</h2>
+                    <h2>Age: ${element.age}</h2>
                 </div>
             </div>
         </div>
             `;
-}).join("");
-document.querySelector(".complete-order-content").innerHTML = orderPage;
+        }).join("");
+        document.querySelector(".profile-content").innerHTML = getProfileUser;
+        // let getDisplayNoneForm = localStorage.getItem("Display None Form");
+        // form.style.display = getDisplayNoneForm;
+    });
+
+//! OTHER PAGES => Basket Display
+let basketItems = []; // Sepetteki ürünleri tutan liste
+// Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
+let savedBasket = localStorage.getItem("Saved Basket");
+basketItems = JSON.parse(savedBasket);
+updateBasket();
+function saveBasket() {
+    let savedBasket = JSON.stringify(basketItems);
+    localStorage.setItem("Saved Basket", savedBasket);
+}
+// Sepet içeriğini güncelleyen fonksiyon
+function updateBasket() {
+    let basketGame = basketItems.map(element => {
+        return `
+          <div class="basket-game m-auto mt-3 p-2 row">
+            <div class="basket-left col-xxl-4 col-xl-4" style="background-image: url(${element.edition.img});
+            background-position: top;
+            background-size: cover;
+            border-radius: 15px;
+            border: 2px solid black;">
+            </div>
+            <div class="basket-right d-flex flex-column justify-content-center align-items-center col-8">
+              <h3>${element.edition.game_name}</h3>
+              <h4>${element.edition.edition_name}</h4>
+              <h4>${element.edition.price}$</h4>
+              <button class="btn btn-danger remove-button">Remove Basket</button>
+            </div>
+          </div>
+          <div class="order-button"><a href="/complete-order.html" class="btn order btn-success mt-2">Complete Order</a></div>
+          `;
+    }).join("");
+    document.querySelector(".basket-content").innerHTML = basketGame;
+
+    // Remove butonlarına dinleyici ekleme
+    let removeGame = document.querySelectorAll(".remove-button");
+    removeGame.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            basketItems.splice(index, 1); // Ürünü sepet listesinden kaldırma
+            updateBasket(); // Sepet içeriğini güncelleme
+            saveBasket();
+        });
+    });
+}
+
+//! COMPLETE ORDER PAGE
+function Order() {
+    let cloudBasket = localStorage.getItem("Saved Basket");
+    let comeBasket = JSON.parse(cloudBasket);
+    let orderPage = comeBasket.map(element => {
+        return `<div class="order-row justify-content-center row mt-4 mb-2 p-5">
+                <div class="col-4">
+                    <div class="order-image" style="background-image: url(${element.edition.img});
+                    width: 100%;
+                    height: 10rem;
+                    background-size:cover;
+                    background-position:top;
+                    border-radius:15px;
+                    border:2px solid #00ffff;">
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="order-info d-flex flex-column justify-content-center align-items-center">
+                        <h1>${element.edition.game_name}</h1>
+                        <h2>${element.edition.edition_name}</h2>
+                        <h2>${element.edition.price}$</h2>
+                        <button id="${element.id}" class="btn btn-danger remove-button">Remove Basket</button>
+                    </div>
+                </div>
+            </div>
+                `;
+    }).join("");
+    document.querySelector(".complete-order-content").innerHTML = orderPage;
+    let removeGame = document.querySelectorAll(".remove-button");
+    removeGame.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            comeBasket.splice(index, 1); // Ürünü sepet listesinden kaldırma
+            console.log(comeBasket);
+            let saveBasket = JSON.stringify(comeBasket);
+            localStorage.setItem("Saved Basket", saveBasket);
+            Order();
+        });
+    });
+}
+Order();
