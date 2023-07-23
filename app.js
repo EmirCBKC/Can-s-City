@@ -840,7 +840,7 @@ function Order() {
     let comeBasket = JSON.parse(cloudBasket);
     let orderPage = comeBasket.map(element => {
         return `<div class="order-row justify-content-center row mt-4 mb-2 p-5">
-                <div class="col-4">
+                <div class="col-xxl-4 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="order-image" style="background-image: url(${element.edition.img});
                     width: 100%;
                     height: 10rem;
@@ -850,7 +850,7 @@ function Order() {
                     border:2px solid #00ffff;">
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="order-info d-flex flex-column justify-content-center align-items-center">
                         <h1>${element.edition.game_name}</h1>
                         <h2>${element.edition.edition_name}</h2>

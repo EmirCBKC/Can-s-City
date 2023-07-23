@@ -1396,6 +1396,38 @@ footer h2 {
         width: 30%;
         height: 50%;
     }
+
+    .ps5-filter {
+        width: 90%;
+        height: 5rem;
+        background-color: #214848;
+    }
+
+    .ps5-filter a {
+        width: 30%;
+        height: 50%;
+    }
+
+    .ps5-filter input {
+        width: 30%;
+        height: 50%;
+    }
+
+    .xbox-filter {
+        width: 90%;
+        height: 5rem;
+        background-color: #214848;
+    }
+
+    .xbox-filter a {
+        width: 30%;
+        height: 50%;
+    }
+
+    .xbox-filter input {
+        width: 30%;
+        height: 50%;
+    }
 }
 
 @media (max-width:630px){
@@ -1405,5 +1437,113 @@ footer h2 {
     .signup-password input,
     .signup-age input {
         font-size: 7px;
+    }
+}
+
+@media (max-width:690px){
+    .contact-form label {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:570px){
+    #desc {
+        height: 10rem;
+        width: 40%;
+        border-radius: 5px;
+        background-color: #000516;
+        border: 2px solid #00ffff;
+        color: #00ffff;
+    }
+    
+    #email,
+    #phone {
+        width: 33%;
+        border-radius: 5px;
+        background-color: #000516;
+        border: 2px solid #00ffff;
+        color: #00ffff;
+    }
+    .one,.two,.three{
+        justify-content: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width:520px){
+    .pc-filter button {
+        width: 25%;
+        height: 35%;
+        text-align: center;
+        font-size: 50%;
+    }
+    .ps5-filter button {
+        width: 25%;
+        height: 35%;
+        text-align: center;
+        font-size: 50%;
+    }
+    .xbox-filter button {
+        width: 25%;
+        height: 35%;
+        text-align: center;
+        font-size: 50%;
+    }
+}
+
+@media (max-width:555px){
+    .brand h1{
+        font-size: 60px;
+    }
+}
+
+@media (max-width:420px){
+    .brand h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:535px){
+    .basket-content{
+        width: 20rem;
+    }
+}
+
+@media (max-width:567px){
+    .user-login-content{
+        width: 25rem;
+    }
+    .user-login-content label{
+        font-size: 13px;
+    }
+    .user-login-content input{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:363px){
+    .user-login-content{
+        width: 15rem;
+    }
+    .user-login-content label{
+        font-size: 10px;
+    }
+    .user-login-content input{
+        font-size: 10px;
+    }
+    .user-login-content button{
+        font-size: 15px;
+    }
+    .user-login-content a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:768px) {
+    .pay-row{
+        width: 80%;
+    }
+    .order-row{
+        width: 80%;
     }
 }
