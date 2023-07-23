@@ -787,6 +787,9 @@ fetch("/users.json")
         // form.style.display = getDisplayNoneForm;
     });
 
+//! USER SIGNUP
+
+
 //! OTHER PAGES => Basket Display
 let basketItems = []; // Sepetteki ürünleri tutan liste
 // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle

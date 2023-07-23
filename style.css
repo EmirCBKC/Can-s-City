@@ -211,12 +211,36 @@ form {
     color: #00aeae;
 }
 
-.user-login-content button {
-    background-color: #000000 !important;
-    border-color: #00ffff !important;
-    color: #00ffff !important;
+.form-buttons button {
+    background-color: #000000;
+    border-color: #00ffff;
+    color: #00ffff;
     width: 40%;
-    font-size: 20px !important;
+    height: 3rem;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.form-buttons button:hover {
+    background-color: #00ffff;
+    border-color: #000000;
+    color: black;
+}
+
+.form-buttons a {
+    background-color: #000000;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    width: 40%;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.form-buttons a:hover {
+    background-color: #00ffff;
+    border-color: #000000;
+    color: black;
 }
 
 .form {
@@ -837,14 +861,14 @@ iframe {
 /******************************************* PROFILE-CSS-START ************************************************/
 
 .profile-background {
-    background-image: linear-gradient(to left, #0a244f36 20%, rgba(0, 25, 38, 0.878) 97%),url(/main-img/profile/background.png);
+    background-image: linear-gradient(to left, #0a244f36 20%, rgba(0, 25, 38, 0.878) 97%), url(/main-img/profile/background.png);
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 60rem;
 }
 
-.profile-content{
+.profile-content {
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
     border: 2px solid #00ffff;
@@ -854,16 +878,16 @@ iframe {
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.profile-img-row{
+.profile-img-row {
     width: 100%;
     height: 10rem;
 }
 
-.profile-info-row{
+.profile-info-row {
     width: 100%;
 }
 
-.profile-info{
+.profile-info {
     color: #00ffff;
 }
 
@@ -872,7 +896,7 @@ iframe {
 /******************************************* COMPLETE-ORDER-CSS-START ************************************************/
 
 .complete-order-background {
-    background-image: linear-gradient(to top, #001231c4 20%, rgba(0, 25, 38, 0.878) 97%),url(/main-img/complete-order/background.jpg);
+    background-image: linear-gradient(to top, #001231c4 20%, rgba(0, 25, 38, 0.878) 97%), url(/main-img/complete-order/background.jpg);
     background-position: bottom;
     background-size: cover;
     width: 100%;
@@ -1072,6 +1096,76 @@ iframe {
 }
 
 /******************************************* CONTACT-CSS-END ************************************************/
+
+/******************************************* SIGN-UP-CSS-START ********************************************/
+
+.signup-background {
+    background-image: linear-gradient(to top, #4d0a4f36 20%, rgba(0, 25, 38, 0.878) 97%), url(/main-img/signup/background.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 75rem;
+}
+
+.signup-content {
+    width: 70%;
+    height: 50rem;
+    background-image: linear-gradient(43deg, #010712 0%, #04132fe4 46%, #305aa896 100%);
+    border-radius: 20px;
+    border: 1px solid #00ffff;
+    box-shadow: 0px 0px 20px #00ffff;
+}
+
+.signup-content h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 0px 0px 10px black
+}
+
+.signup-row{
+    width: 100%;
+}
+
+.signup-name label,
+.signup-surname label,
+.signup-username label,
+.signup-password label,
+.signup-age label {
+    color: #00ffff;
+    font-size: 30px;
+    margin-right: 2rem;
+}
+
+.signup-name input,
+.signup-surname input,
+.signup-username input,
+.signup-password input,
+.signup-age input {
+    color: #00ffff;
+    border-radius: 5px;
+    background-color: #000516;
+    border: 2px solid #00ffff;
+    font-size: 20px;
+}
+
+.signup-col button{
+    color: #00ffff;
+    border-radius: 5px;
+    background-color: #000516;
+    border: 2px solid #00ffff;
+    font-size: 20px;
+    width: 40%;
+    box-shadow: 0px 0px 5px #00ffff;
+}
+
+.signup-col button:hover{
+    background-color: #00ffff;
+    border: 2px solid #000516;
+    color: #000516;
+    text-shadow: 0px 0px 5px black;
+}
+
+/******************************************* SIGN-UP-CSS-END ********************************************/
 
 /******************************************* FOOTER-CSS-START ***********************************************/
 footer {
@@ -1285,6 +1379,7 @@ footer h2 {
 /******************************************* Animation-End ****************************************************/
 
 /************************************* Media-Responsive ******************************************************/
+
 @media (max-width:750px) {
     .pc-filter {
         width: 90%;
@@ -1300,5 +1395,15 @@ footer h2 {
     .pc-filter input {
         width: 30%;
         height: 50%;
+    }
+}
+
+@media (max-width:630px){
+    .signup-name input,
+    .signup-surname input,
+    .signup-username input,
+    .signup-password input,
+    .signup-age input {
+        font-size: 7px;
     }
 }
