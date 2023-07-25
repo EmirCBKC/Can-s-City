@@ -144,7 +144,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error=>console.log("HATA",error));
+    }).catch(error => console.log("HATA", error));
 
 //! PS5 GAMES => PS5 Page
 fetch("/games.json")
@@ -293,7 +293,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error=>console.log("HATA",error));;
+    }).catch(error => console.log("HATA", error));;
 
 //! XBOX GAMES => XBOX Page
 fetch("/games.json")
@@ -442,7 +442,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error=>console.log("HATA",error));;
+    }).catch(error => console.log("HATA", error));;
 
 //! GO DETAIL => Detail Page
 fetch("/games.json")
@@ -697,7 +697,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error=>console.log("HATA",error));;
+    }).catch(error => console.log("HATA", error));;
 
 //! BASKET & USER => Navbar
 let basket = document.querySelector("#basket");
@@ -785,10 +785,33 @@ fetch("/users.json")
         document.querySelector(".profile-content").innerHTML = getProfileUser;
         // let getDisplayNoneForm = localStorage.getItem("Display None Form");
         // form.style.display = getDisplayNoneForm;
-    }).catch(error=>console.log("HATA",error));;
+    }).catch(error => console.log("HATA", error));;
 
-//! USER SIGNUP
-//..........................
+//! USER SIGNUP => Add User
+let submit = document.querySelector("#submit");
+let nameInput = document.querySelector("#u_name");
+let surnameInput = document.querySelector("#u_surname");
+let usernameInput = document.querySelector("#u_username");
+let passwordInput = document.querySelector("#u_password");
+let ageInput = document.querySelector("#u_age");
+
+submit.addEventListener("click", () => {
+
+    fetch("/users.json", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(
+            {
+                username: usernameInput,
+                password: passwordInput,
+                name: nameInput,
+                surname: surnameInput,
+                age: ageInput,
+            })
+    })
+});
 
 //! OTHER PAGES => Basket Display
 let basketItems = []; // Sepetteki ürünleri tutan liste
@@ -879,4 +902,4 @@ fetch("/games.json")
             });
         }
         Order();
-    }).catch(error=>console.log("HATA",error));;
+    }).catch(error => console.log("HATA", error));
