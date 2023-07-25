@@ -143,7 +143,7 @@ fetch("/games.json")
             });
         });
 
-    });
+    }).catch(error=>console.log("HATA",error));
 
 //! PS5 GAMES => PS5 Page
 fetch("/games.json")
@@ -292,7 +292,7 @@ fetch("/games.json")
             });
         });
 
-    });
+    }).catch(error=>console.log("HATA",error));;
 
 //! XBOX GAMES => XBOX Page
 fetch("/games.json")
@@ -441,7 +441,7 @@ fetch("/games.json")
             });
         });
 
-    });
+    }).catch(error=>console.log("HATA",error));;
 
 //! GO DETAIL => Detail Page
 fetch("/games.json")
@@ -696,7 +696,7 @@ fetch("/games.json")
             });
         });
 
-    });
+    }).catch(error=>console.log("HATA",error));;
 
 //! BASKET & USER => Navbar
 let basket = document.querySelector("#basket");
@@ -784,7 +784,7 @@ fetch("/users.json")
         document.querySelector(".profile-content").innerHTML = getProfileUser;
         // let getDisplayNoneForm = localStorage.getItem("Display None Form");
         // form.style.display = getDisplayNoneForm;
-    });
+    }).catch(error=>console.log("HATA",error));;
 
 //! USER SIGNUP
 //..........................
@@ -878,4 +878,4 @@ fetch("/games.json")
             });
         }
         Order();
-    });
+    }).catch(error=>console.log("HATA",error));;
