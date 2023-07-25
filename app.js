@@ -1,3 +1,4 @@
+
 //! PC GAMES => PC Page
 fetch("/games.json")
     .then(res => res.json())
@@ -789,9 +790,9 @@ fetch("/users.json")
 //! USER SIGNUP
 //..........................
 
-
 //! OTHER PAGES => Basket Display
 let basketItems = []; // Sepetteki ürünleri tutan liste
+saveBasket();
 // Sayfa yüklendiğinde local storage'dan sepet içeriğini al ve güncelle
 let savedBasket = localStorage.getItem("Saved Basket");
 basketItems = JSON.parse(savedBasket);
