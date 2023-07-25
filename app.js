@@ -1,4 +1,3 @@
-
 //! PC GAMES => PC Page
 fetch("/games.json")
     .then(res => res.json())
@@ -144,7 +143,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error => console.log("HATA", error));
+    }).catch(error => console.log("Warning", error));
 
 //! PS5 GAMES => PS5 Page
 fetch("/games.json")
@@ -293,7 +292,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error => console.log("HATA", error));;
+    }).catch(error => console.log("Warning", error));;
 
 //! XBOX GAMES => XBOX Page
 fetch("/games.json")
@@ -442,7 +441,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error => console.log("HATA", error));;
+    }).catch(error => console.log("Warning", error));;
 
 //! GO DETAIL => Detail Page
 fetch("/games.json")
@@ -697,7 +696,7 @@ fetch("/games.json")
             });
         });
 
-    }).catch(error => console.log("HATA", error));;
+    }).catch(error => console.log("Warning", error));;
 
 //! BASKET & USER => Navbar
 let basket = document.querySelector("#basket");
@@ -725,15 +724,13 @@ user.addEventListener("click", () => {
     }
 });
 
-//! USER LOGIN => Profile Page
+//! USER LOGIN
 fetch("/users.json")
     .then(res => res.json())
     .then(data => {
-        let cloudUser = localStorage.getItem("Saved Users");
-        let localUser = JSON.parse(cloudUser);
-        let userContent = document.querySelector(".user-content");
+
         let login = document.querySelector("#login");
-        let form = document.querySelector(".form");
+
         login.addEventListener("click", (e) => {
             let username = document.querySelector("#username").value;
             let password = document.querySelector("#password").value;
@@ -744,17 +741,51 @@ fetch("/users.json")
                 return element.password.includes(password);
             });
             if (filterUsername.length == 1 && filterPassword.length == 1) {
-                window.location.href = "profile.html";
                 let getUser = data.filter(element => element.username == username && element.password == password);
-                form.style.display = "none";
-                userContent.style.display = "none";
-                localStorage.setItem("Display None Form", "none");
+
                 let users = JSON.stringify(getUser);
                 localStorage.setItem("Saved Users", users);
+                
+                let cloudUser = localStorage.getItem("Saved Users");
+                let localUser = JSON.parse(cloudUser);
+
+                let loginUser = localUser.map(element => {
+                    return `<div class="form" style="display:none;">
+                            <div class="username d-flex justify-content-end align-items-center">
+                                <label class="me-3" for="">Username: </label>
+                                <input id="username" type="text" placeholder="username">
+                            </div>
+                            <div class="password d-flex justify-content-end align-items-center">
+                                <label class="me-3" for="">Password: </label>
+                                <input id="password" type="password" placeholder="password">
+                            </div>
+                            <div class="remember d-flex justify-content-end">
+                                <label class="me-1" for="">Remember Me</label>
+                                <input id="remember" type="checkbox">
+                            </div>
+                            <div class="form-buttons d-flex justify-content-end">
+                                <button id="login" class="mt-2 me-4">Login</button>
+                                <a href="/signup.html" class="mt-2 d-flex justify-content-center align-items-center">Sign Up</a>
+                            </div>
+                        </div>
+                        <div class="login">
+                            <h1>WELCOME ${element.name}</h1>
+                            <h1>Profilim</h1>
+                            <button id="exit" class="mt-2 me-4">Exit</button>
+                        </div>
+                            `;
+                }).join("");
+                document.querySelector(".user-login-content").innerHTML = loginUser;
+
+
             } else {
                 alert("Kullanıcı adı veya şifre yanlış");
             }
         });
+
+        //! USER => Profile Page
+        let cloudUser = localStorage.getItem("Saved Users");
+        let localUser = JSON.parse(cloudUser);
         let getProfileUser = localUser.map(element => {
             return `<div class="profile-img-row p-2 mb-5 row justify-content-center">
             <div class="profile-img-col d-flex justify-content-center mt-4 mb-4 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -783,9 +814,7 @@ fetch("/users.json")
             `;
         }).join("");
         document.querySelector(".profile-content").innerHTML = getProfileUser;
-        // let getDisplayNoneForm = localStorage.getItem("Display None Form");
-        // form.style.display = getDisplayNoneForm;
-    }).catch(error => console.log("HATA", error));;
+    }).catch(error => console.log("Warning", error));
 
 //! USER SIGNUP => Add User
 let submit = document.querySelector("#submit");
@@ -794,24 +823,27 @@ let surnameInput = document.querySelector("#u_surname");
 let usernameInput = document.querySelector("#u_username");
 let passwordInput = document.querySelector("#u_password");
 let ageInput = document.querySelector("#u_age");
+try {
+    submit.addEventListener("click", () => {
 
-submit.addEventListener("click", () => {
-
-    fetch("/users.json", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(
-            {
-                username: usernameInput,
-                password: passwordInput,
-                name: nameInput,
-                surname: surnameInput,
-                age: ageInput,
-            })
-    })
-});
+        fetch("/users.json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(
+                {
+                    username: usernameInput,
+                    password: passwordInput,
+                    name: nameInput,
+                    surname: surnameInput,
+                    age: ageInput,
+                })
+        }).catch(error => console.log("Warning", error));
+    });
+} catch (error) {
+    console.log("Warning", error);
+}
 
 //! OTHER PAGES => Basket Display
 let basketItems = []; // Sepetteki ürünleri tutan liste
@@ -902,4 +934,4 @@ fetch("/games.json")
             });
         }
         Order();
-    }).catch(error => console.log("HATA", error));
+    }).catch(error => console.log("Warning", error));
